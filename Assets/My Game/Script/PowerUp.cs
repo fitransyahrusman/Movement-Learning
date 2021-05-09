@@ -8,12 +8,6 @@ public class PowerUp : MonoBehaviour
     [SerializeField]
     private int powerupsID; //0=3ple shoot, 1=speed, 2=shield.
 
-    private void Start()
-    {
-       
-
-    }
-
     void Update()
     {
         transform.Translate(new Vector2(-1f, 0f) * _speed * Time.deltaTime);
@@ -39,7 +33,7 @@ public class PowerUp : MonoBehaviour
                         player.SpeedActive();
                         break;
                     case 2:
-                        Debug.Log("Shield is active");
+                        player.ShieldActive();
                         break;
                 }
             }

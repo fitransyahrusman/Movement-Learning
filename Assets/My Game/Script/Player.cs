@@ -11,9 +11,8 @@ public class Player : MonoBehaviour
     private float _firerate = 0.5f;
     private float _tripleFirerate = 1.25f;
     private float _canfire = -1f;
-    private SpawnManager _spawnManager;
-    [SerializeField]
     private int _lives = 3;
+    private SpawnManager _spawnManager;
     [SerializeField]
     private GameObject _laserprefab;
     [SerializeField]
@@ -22,11 +21,16 @@ public class Player : MonoBehaviour
     private bool _isTripleShotActive = false;
     [SerializeField]
     private bool _isSpeedActive = false;
+    [SerializeField]
+    private bool _isShieldActive = false;
+    [SerializeField]
+    private GameObject _shieldVisualizer;
     
     void Start()
-    {   
-      transform.position = new Vector3 (-7, 0, 0);
-        _spawnManager = GameObject.Find("Spawn_Manager").GetComponent<SpawnManager>();
+    {
+        _shieldVisualizer.SetActive(false); //makesure visualizer always off
+        transform.position = new Vector3 (-7, 0, 0); //starting position
+        _spawnManager = GameObject.Find("Spawn_Manager").GetComponent<SpawnManager>(); //communication with spawn manager for null checking
         
         if (_spawnManager == null)
         {
@@ -49,21 +53,10 @@ public class Player : MonoBehaviour
         float rightInput = Input.GetAxis("Right");
         float leftInput = Input.GetAxis("Left");
         float VerticalInput = Input.GetAxis("Vertical");
-
         //movement
-        /*if (_isSpeedActive ==false)
-         { */
         transform.Translate(Vector3.right * rightInput * _speedRight * Time.deltaTime);
         transform.Translate(Vector3.right * leftInput * _speedLeft * Time.deltaTime);
         transform.Translate(Vector3.up * VerticalInput * _speedVertical * Time.deltaTime);
-         /*}
-         else               ------- IF ELSE STEMENT NOT NEEDED BECAUSE WE MODIFY DIRECTLY IN PUBLIC METHOD AND COOLDOWN ROUTINE -----
-         {  
-            transform.Translate(Vector3.right * rightInput * _speedRight * _speedMultiplier * Time.deltaTime);
-            transform.Translate(Vector3.right * leftInput * _speedLeft * _speedMultiplier * Time.deltaTime);
-            transform.Translate(Vector3.up * VerticalInput * _speedVertical * _speedMultiplier * Time.deltaTime);
-         }*/
-
         //bounds
         transform.position = new Vector3 (transform.position.x, Mathf.Clamp(transform.position.y,-4.808401f, 4.808401f),0f );
         transform.position = new Vector3 (Mathf.Clamp(transform.position.x,-8.382592f ,5f), transform.position.y, 0f);
@@ -92,6 +85,12 @@ public class Player : MonoBehaviour
     }
     public void Damage()
     {
+        if (_isShieldActive == true)
+        {
+            _isShieldActive = false; //shieldcooldown
+            _shieldVisualizer.SetActive(false); //turn of visualizer
+            return;
+        }
         _lives--;
         if (_lives <1) //playerdeath
         {
@@ -124,6 +123,11 @@ public class Player : MonoBehaviour
         _speedRight /= _speedMultiplier; //this cause if statement not necessary
         _speedLeft /= _speedMultiplier;
         _speedVertical /= _speedMultiplier;
+    }
+    public void ShieldActive ()
+    {
+        _isShieldActive = true;
+        _shieldVisualizer.SetActive(true);
     }
 }
    

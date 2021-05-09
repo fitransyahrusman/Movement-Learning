@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField]
-    private float _speed = 4f;
+    private float _speed = 5f;
     
     void Update()
     {
@@ -20,15 +19,11 @@ public class Enemy : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            /* other.transform.GetComponent<Player>().Damage();
-           Destroy(this.gameObject);
-           ----------------------------*/
-            //lets do null checking
             Player player = other.transform.GetComponent<Player>();
-            if (player != null)
+            if (player != null) //nullchecking first
             {
                 player.Damage();
-                Debug.Log("hit");
+                Destroy(this.gameObject);
             }  
         }
         if (other.tag == "Laser")

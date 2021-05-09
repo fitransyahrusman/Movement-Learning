@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class Asteroid : MonoBehaviour
 {
-    [SerializeField]
-    private float _speed = 4f;
+    private float _speed = 1.5f;
 
     void Update()
     {
