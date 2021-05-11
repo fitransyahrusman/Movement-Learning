@@ -11,10 +11,13 @@ public class UIManager : MonoBehaviour
     private Sprite[] _livesSprite;
     [SerializeField]
     private Image _liveImg;
+    [SerializeField]
+    private Text _gameoverText;
    
     void Start()
     {
         _scoreText.text = "Score is : " + 0;
+        _gameoverText.gameObject.SetActive(false);
     }
 
     public void UpdateScore (int playerScore)
@@ -25,5 +28,21 @@ public class UIManager : MonoBehaviour
     public void UpdateLives(int currentLives)
     {
         _liveImg.sprite = _livesSprite[currentLives];
+        if (currentLives<1)
+        {
+            _gameoverText.gameObject.SetActive(true);
+            StartCoroutine(GameoverFlicker());
+        }
+    }
+
+    IEnumerator GameoverFlicker()
+    {
+        while (true)
+        {
+            _gameoverText.text = "Game Over";
+            yield return new WaitForSeconds(0.25f);
+            _gameoverText.text = "";
+            yield return new WaitForSeconds(0.25f);
+        }
     }
 }

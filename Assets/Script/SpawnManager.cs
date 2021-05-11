@@ -16,8 +16,9 @@ public class SpawnManager : MonoBehaviour
     private GameObject _asteroidContainer;
     [SerializeField]
     private GameObject _PowerupContainer;
+    [SerializeField]
     private bool _stopSpawning = false;
-    
+   
     void Start()
     {
         StartCoroutine("SpawnEnemy");
@@ -27,12 +28,11 @@ public class SpawnManager : MonoBehaviour
 
     IEnumerator SpawnEnemy ()
     {
+        float _spawnTimeEnemy = Random.Range(2f, 4f); //makespawntime random
         while (_stopSpawning == false)
         {
-            float _spawnTimeEnemy = Random.Range(2f, 4f); //makespawntime random
             GameObject newEnemy = Instantiate(_enemyPrefab, new Vector3(12f, Random.Range(-4.5f, 4.5f), 0f), Quaternion.identity);
             newEnemy.transform.parent = _enemyContainer.transform;
-
             yield return new WaitForSeconds( _spawnTimeEnemy );
         }
     }
@@ -40,7 +40,7 @@ public class SpawnManager : MonoBehaviour
     {
         while (_stopSpawning == false)
         {
-            float _spawnTimeAsteroid = Random.Range(4f, 6f); //makespawntime random
+            int _spawnTimeAsteroid = Random.Range(10, 15); //makespawntime random
             yield return new WaitForSeconds(_spawnTimeAsteroid);
             GameObject newAsteroid = Instantiate(_asteroid, new Vector2(Random.Range(0f, 12f), 7.2f), Quaternion.identity);
             newAsteroid.transform.parent = _asteroidContainer.transform;
@@ -50,15 +50,17 @@ public class SpawnManager : MonoBehaviour
     {
         while (_stopSpawning == false)
         {
-            float _spawnTimePowerUp = Random.Range (15f, 20f); //makespawntime random
-            yield return new WaitForSeconds( _spawnTimePowerUp);
+            int _spawnTimePowerUp = Random.Range(15, 20); //makespawntime random
+            yield return new WaitForSeconds(_spawnTimePowerUp);
             int randompowerups = Random.Range (0,3 );
             GameObject newPowerup = Instantiate( powerups[randompowerups] , new Vector2(11.5f, Random.Range(-4.5f, 4.5f)), Quaternion.identity);
             newPowerup.transform.parent = _PowerupContainer.transform;
         }
     }
-    public void OnPlayerDeath ()
+    public void OnPlayerDeath()
     {
+        _stopSpawning=true;
+        _stopSpawning = true;
         _stopSpawning = true;
     }
 }

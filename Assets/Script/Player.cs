@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     private float _firerate = 0.5f;
     private float _tripleFirerate = 1.25f;
     private float _canfire = -1f;
+    [SerializeField]
     private int _lives = 3;
     private SpawnManager _spawnManager;
     [SerializeField]
@@ -101,8 +102,8 @@ public class Player : MonoBehaviour
             return;
         }
         _lives--;
-        _uiManager.UpdateLives(_lives);
-        if (_lives <1) //playerdeath
+        _uiManager.UpdateLives(_lives); //lives display
+        if (_lives < 1) //playerdeath
         {
             _spawnManager.OnPlayerDeath();
             Destroy(this.gameObject);

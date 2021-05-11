@@ -6,21 +6,27 @@ public class Asteroid : MonoBehaviour
 {
     private float _speed = 1.5f;
     private Player _player;
+   
 
-    void Start()
+    private void Start()
     {
-        _player = GameObject.Find("Player").GetComponent<Player>();
+        _player = GameObject.Find("Player").GetComponent<Player>(); //this create error/null after player dead
     }
 
     void Update()
     {
         transform.Translate(new Vector2 (-1f,-1f) * _speed * Time.deltaTime);
+        if (transform.position.y < - 7.2f)
+        {
+            transform.position = new Vector2(Random.Range(0f, 12f), 7.2f);
+        }
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Player")
         {
-            other.transform.GetComponent<Player>().Damage();
+            _player.Damage();
+            Destroy(this.gameObject);
         }
         if (other.tag == "Laser")
         {
