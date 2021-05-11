@@ -17,6 +17,7 @@ public class SpawnManager : MonoBehaviour
     [SerializeField]
     private GameObject _PowerupContainer;
     private bool _stopSpawning = false;
+    
     void Start()
     {
         StartCoroutine("SpawnEnemy");
