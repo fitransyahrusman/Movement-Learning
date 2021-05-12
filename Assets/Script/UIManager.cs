@@ -39,7 +39,7 @@ public class UIManager : MonoBehaviour
     {
         while (true)
         {
-            _gameoverText.text = "GAME OVER";
+            _gameoverText.text = "GAME OVER";      
             yield return new WaitForSeconds(0.25f);
             _gameoverText.text = "";
             yield return new WaitForSeconds(0.25f);
