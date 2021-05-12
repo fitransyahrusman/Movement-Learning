@@ -103,10 +103,11 @@ public class Player : MonoBehaviour
         }
         _lives--;
         _uiManager.UpdateLives(_lives); //lives display
-        if (_lives < 1) //playerdeath
+        if (_lives ==0 ) //playerdeath
         {
             _spawnManager.OnPlayerDeath();
             Destroy(this.gameObject);
+           
         }
     }
     public void TripleShotActive ()
