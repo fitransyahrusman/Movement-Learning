@@ -42,7 +42,7 @@ public class SpawnManager : MonoBehaviour
         {
             int _spawnTimeAsteroid = Random.Range(10, 15); //makespawntime random
             yield return new WaitForSeconds(_spawnTimeAsteroid);
-            GameObject newAsteroid = Instantiate(_asteroid, new Vector2(Random.Range(0f, 12f), 7.2f), Quaternion.identity);
+            GameObject newAsteroid = Instantiate(_asteroid, new Vector2(Random.Range(-8f, 0f), 7.2f), Quaternion.identity);
             newAsteroid.transform.parent = _asteroidContainer.transform;
         }  
     }
