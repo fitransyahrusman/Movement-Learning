@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scene/Scene Baru.unity
+    path: Assets/Scene/Main Menu.unity
+    guid: fdd26fc3cd611214197796d734ecc928
+  - enabled: 1
+    path: Assets/Scene/Game.unity
     guid: da0ef3c375a78c04995dfb6555f78736
   m_configObjects: {}
