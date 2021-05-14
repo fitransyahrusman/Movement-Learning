@@ -1,6 +1,6 @@
 Using pre-set license
 Built from '2020.3/staging' branch; Version is '2020.3.5f1 (8095aa901b9b) revision 8426922'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10 Home Single Language; OS build 19042.928; Version 2009; 64bit' Language: 'en' Physical Memory: 12167 MB
+OS: 'Windows 10 Home Single Language; OS build 19042.985; Version 2009; 64bit' Language: 'en' Physical Memory: 12167 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
  COMMAND LINE ARGUMENTS:
@@ -15,11 +15,11 @@ C:/Users/Fitransyah/Movement Learning
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-52350
+65406
 Successfully changed project path to: C:/Users/Fitransyah/Movement Learning
 C:/Users/Fitransyah/Movement Learning
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 180.78 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 185.34 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.5f1 (8095aa901b9b)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/Resources/UnitySubsystems
@@ -35,18 +35,1103 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56444
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56212
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.007907 seconds.
+Registered in 0.012656 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 171.43 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 204.23 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  4.614 seconds
+- Completed reload, in  4.673 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.006964 seconds.
+Registered in 0.006274 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 81.61 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.219 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.13 seconds
+Refreshing native plugins compatible for Editor in 1.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2464 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 115.1 MB.
+System memory in use after: 112.2 MB.
+
+Unloading 46 unused Assets to reduce memory usage. Loaded Objects now: 2870.
+Total: 5.629500 ms (FindLiveObjects: 0.409000 ms CreateObjectMapping: 0.243500 ms MarkObjects: 2.688900 ms  DeleteObjects: 2.286800 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00157.png
+  artifactKey: Guid(d23e2f57007dc4330bcbb17700957c97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00157.png using Guid(d23e2f57007dc4330bcbb17700957c97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ab4447b2cafadf658b39a1a6a3c8e31') in 0.707865 seconds
+  Import took 0.719688 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007307 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.89 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.177 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.07 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2390 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 114.5 MB.
+System memory in use after: 111.7 MB.
+
+Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 2879.
+Total: 11.042900 ms (FindLiveObjects: 0.481100 ms CreateObjectMapping: 0.228600 ms MarkObjects: 5.445400 ms  DeleteObjects: 4.885300 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 153.322934 seconds.
+  path: Assets/Animation/Enemy_Explotion_anim.anim
+  artifactKey: Guid(573a1349ff498d04c95256d5e364fb5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animation/Enemy_Explotion_anim.anim using Guid(573a1349ff498d04c95256d5e364fb5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '513598098a148e96202c0f323c7939cd') in 0.068685 seconds
+  Import took 0.081007 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.019391 seconds.
+  path: Assets/Animation/Enemy_Explotion_anim.anim
+  artifactKey: Guid(573a1349ff498d04c95256d5e364fb5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animation/Enemy_Explotion_anim.anim using Guid(573a1349ff498d04c95256d5e364fb5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '513598098a148e96202c0f323c7939cd') in 0.005578 seconds
+  Import took 0.012341 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 44.296702 seconds.
+  path: Assets/Animation/Enemy 1.controller
+  artifactKey: Guid(d702424667f742f479778bb6209c9832) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animation/Enemy 1.controller using Guid(d702424667f742f479778bb6209c9832) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aafdd2ed400bd08d58ac9388a016daad') in 0.042508 seconds
+  Import took 0.057461 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.988209 seconds.
+  path: Assets/Animation/Enemy.controller
+  artifactKey: Guid(419902e8fc7a96047a5c01d1d078c47f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animation/Enemy.controller using Guid(419902e8fc7a96047a5c01d1d078c47f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7426fe28a21f3f6f06b53ea8fce7f00') in 0.024632 seconds
+  Import took 0.032059 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007419 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.39 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.246 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.56 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2390 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 114.6 MB.
+System memory in use after: 111.8 MB.
+
+Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 2882.
+Total: 12.838400 ms (FindLiveObjects: 0.770000 ms CreateObjectMapping: 0.395900 ms MarkObjects: 6.253000 ms  DeleteObjects: 5.416500 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 21.573779 seconds.
+  path: Assets/Animation/Enemy.controller
+  artifactKey: Guid(d702424667f742f479778bb6209c9832) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animation/Enemy.controller using Guid(d702424667f742f479778bb6209c9832) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f621d85fb2e820a66c29546d5388bb4c') in 0.051914 seconds
+  Import took 0.065254 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004702 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.29 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.373 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.33 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2390 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 114.6 MB.
+System memory in use after: 111.8 MB.
+
+Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 2885.
+Total: 13.063900 ms (FindLiveObjects: 0.894700 ms CreateObjectMapping: 0.609100 ms MarkObjects: 6.627900 ms  DeleteObjects: 4.927200 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003176 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.58 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.153 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.57 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2390 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 114.6 MB.
+System memory in use after: 111.8 MB.
+
+Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 2888.
+Total: 6.499900 ms (FindLiveObjects: 0.414600 ms CreateObjectMapping: 0.196400 ms MarkObjects: 3.227800 ms  DeleteObjects: 2.658900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 952.040131 seconds.
+  path: Assets/Script/Enemy.cs
+  artifactKey: Guid(3c6d2bb220e6e3746acb67d60f9c1fba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/Enemy.cs using Guid(3c6d2bb220e6e3746acb67d60f9c1fba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb5f224ed0c14a8b0a61b947259f79b7') in 0.041936 seconds
+  Import took 0.050390 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001984 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.46 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.151 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.35 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2390 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 114.5 MB.
+System memory in use after: 111.8 MB.
+
+Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 2891.
+Total: 10.585300 ms (FindLiveObjects: 0.731400 ms CreateObjectMapping: 0.398200 ms MarkObjects: 4.927700 ms  DeleteObjects: 4.524800 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 23.436496 seconds.
+  path: Assets/Script/Enemy.cs
+  artifactKey: Guid(3c6d2bb220e6e3746acb67d60f9c1fba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/Enemy.cs using Guid(3c6d2bb220e6e3746acb67d60f9c1fba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16008107e12c168c38f87d1dfc983cb8') in 0.022242 seconds
+  Import took 0.034430 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004585 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.87 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.030 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.56 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2390 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 114.7 MB.
+System memory in use after: 111.9 MB.
+
+Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 2894.
+Total: 9.088500 ms (FindLiveObjects: 0.780200 ms CreateObjectMapping: 0.395600 ms MarkObjects: 4.939600 ms  DeleteObjects: 2.969000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003846 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.83 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.260 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.88 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2390 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 114.7 MB.
+System memory in use after: 111.9 MB.
+
+Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 2897.
+Total: 6.118900 ms (FindLiveObjects: 0.377400 ms CreateObjectMapping: 0.151900 ms MarkObjects: 2.983100 ms  DeleteObjects: 2.604500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005096 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.05 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.071 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.96 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2390 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 114.7 MB.
+System memory in use after: 111.9 MB.
+
+Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 2900.
+Total: 12.608700 ms (FindLiveObjects: 0.763800 ms CreateObjectMapping: 0.370600 ms MarkObjects: 6.090800 ms  DeleteObjects: 5.379700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004026 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.84 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.540 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.82 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2390 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 114.7 MB.
+System memory in use after: 111.9 MB.
+
+Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 2903.
+Total: 6.022000 ms (FindLiveObjects: 0.276300 ms CreateObjectMapping: 0.138400 ms MarkObjects: 2.869800 ms  DeleteObjects: 2.736100 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 618.015131 seconds.
+  path: Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00001.png
+  artifactKey: Guid(5939592cd9b9f4335a4ee907fa989be4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00001.png using Guid(5939592cd9b9f4335a4ee907fa989be4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5461e666634b318d03284ad2ec39cb55') in 0.198281 seconds
+  Import took 0.212287 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.274795 seconds.
+  path: Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00002.png
+  artifactKey: Guid(537930933d92c4333ae40c1d6d362b74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00002.png using Guid(537930933d92c4333ae40c1d6d362b74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b6286a8b32270ca102b8551db1ff198') in 0.040666 seconds
+  Import took 0.050498 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.037648 seconds.
+  path: Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00003.png
+  artifactKey: Guid(c2e13c0c12b714179887597dd1d6b1f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00003.png using Guid(c2e13c0c12b714179887597dd1d6b1f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a992d77d50e31e5fc177b64ef7bbb975') in 0.024566 seconds
+  Import took 0.032198 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.039118 seconds.
+  path: Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00004.png
+  artifactKey: Guid(f574bd8eb232a4689af64e1d5dc05a21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00004.png using Guid(f574bd8eb232a4689af64e1d5dc05a21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5b90676191c6d1441292fe60018cc07') in 0.023643 seconds
+  Import took 0.030094 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.046465 seconds.
+  path: Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00005.png
+  artifactKey: Guid(6f55af48c2b0a4aac993a217fcebe9d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00005.png using Guid(6f55af48c2b0a4aac993a217fcebe9d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eddf934a0284744ff65e1057d0cc92f7') in 0.034266 seconds
+  Import took 0.043964 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.066031 seconds.
+  path: Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00006.png
+  artifactKey: Guid(786597786c8f747a581a1bfb26411214) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00006.png using Guid(786597786c8f747a581a1bfb26411214) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18415e6d9d4ce83fb41a40cdb3e82621') in 0.047601 seconds
+  Import took 0.059031 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.085628 seconds.
+  path: Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00007.png
+  artifactKey: Guid(76f79295758ed42e08496e40465300ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00007.png using Guid(76f79295758ed42e08496e40465300ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '12f1a9e96a69fb2a8834cb611a98ccf3') in 0.073948 seconds
+  Import took 0.091856 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.118996 seconds.
+  path: Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00009.png
+  artifactKey: Guid(72fa818d45dda4ee998bda50180f1e96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00009.png using Guid(72fa818d45dda4ee998bda50180f1e96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '36bbc99f4172a38ffeb2d40b5be5f37e') in 0.080887 seconds
+  Import took 0.097711 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.104191 seconds.
+  path: Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00010.png
+  artifactKey: Guid(bdae25617687d4961a3b7a6a1b99da80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00010.png using Guid(bdae25617687d4961a3b7a6a1b99da80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77fa51e71b84ffe63851631a2443dd71') in 0.078496 seconds
+  Import took 0.098168 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.112628 seconds.
+  path: Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00012.png
+  artifactKey: Guid(1236074791aa04c62a63bb23a805edf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00012.png using Guid(1236074791aa04c62a63bb23a805edf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af5d7f8b803a91c244e2b538764a07ef') in 0.077302 seconds
+  Import took 0.094508 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.169069 seconds.
+  path: Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00016.png
+  artifactKey: Guid(1290119f2b43a414f860b6224a41b855) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00016.png using Guid(1290119f2b43a414f860b6224a41b855) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2830336cdd34e525d314ee23f446fc75') in 0.120267 seconds
+  Import took 0.137134 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.135508 seconds.
+  path: Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00018.png
+  artifactKey: Guid(84d1b40d1791a4703a24a3508945050d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00018.png using Guid(84d1b40d1791a4703a24a3508945050d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90dd0b21d9b3ba232fdf0768e96f4e21') in 0.081817 seconds
+  Import took 0.099752 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.061287 seconds.
+  path: Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00019.png
+  artifactKey: Guid(4aad5b508acca4c28ab8297b99c80a38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00019.png using Guid(4aad5b508acca4c28ab8297b99c80a38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f142d0a6ee8706f67415d9da1b1f81c') in 0.051949 seconds
+  Import took 0.065041 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.064880 seconds.
+  path: Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00020.png
+  artifactKey: Guid(f77bd938fdae34726a4d72c41253bfe3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00020.png using Guid(f77bd938fdae34726a4d72c41253bfe3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31baa1a5769ef8d912ab666f3da3f321') in 0.048476 seconds
+  Import took 0.060061 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.092210 seconds.
+  path: Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00022.png
+  artifactKey: Guid(d2b526d33b19b476084bea7e7af259c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00022.png using Guid(d2b526d33b19b476084bea7e7af259c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1bde466e0b8b1fcb17ee585cf8559bdd') in 0.039061 seconds
+  Import took 0.046691 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.015982 seconds.
+  path: Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00023.png
+  artifactKey: Guid(eedb9448dfabd40908981ed6d9022d67) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00023.png using Guid(eedb9448dfabd40908981ed6d9022d67) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8809329d5e48c6e7601130825422d37d') in 0.024919 seconds
+  Import took 0.030062 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.037412 seconds.
+  path: Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00024.png
+  artifactKey: Guid(543e52a636fd448509dbdf7e477bf72f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00024.png using Guid(543e52a636fd448509dbdf7e477bf72f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '481754f765778a9d697c11dd4853b4a6') in 0.033675 seconds
+  Import took 0.040187 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.057485 seconds.
+  path: Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00025.png
+  artifactKey: Guid(a00237563fc6a44aabd65df680e1f5ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00025.png using Guid(a00237563fc6a44aabd65df680e1f5ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d42a1c9cda519fce9e2cf2c0698bdea') in 0.049057 seconds
+  Import took 0.058355 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.094481 seconds.
+  path: Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00026.png
+  artifactKey: Guid(34a342ded83ad428c962af40193edb9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00026.png using Guid(34a342ded83ad428c962af40193edb9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0c72d2c6ee106b0198f56f00400cb95') in 0.051774 seconds
+  Import took 0.063990 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.088218 seconds.
+  path: Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00028.png
+  artifactKey: Guid(544867a01983e4dd2a740a9bf0048d78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00028.png using Guid(544867a01983e4dd2a740a9bf0048d78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7bada3cf1528440ae2f5b57fd8eafc39') in 0.065689 seconds
+  Import took 0.075404 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.051949 seconds.
+  path: Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00030.png
+  artifactKey: Guid(7b53d2e3915e84cf6bc46246ae29378a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00030.png using Guid(7b53d2e3915e84cf6bc46246ae29378a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f55aaa3aab138adb4d1fd828a15bbb7e') in 0.069043 seconds
+  Import took 0.085806 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.072601 seconds.
+  path: Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00031.png
+  artifactKey: Guid(be16f9d18299740eba37f17f3ae13810) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00031.png using Guid(be16f9d18299740eba37f17f3ae13810) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3166e42348d13c5cb3c2e7d2a1de70ba') in 0.075684 seconds
+  Import took 0.091343 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.097057 seconds.
+  path: Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00032.png
+  artifactKey: Guid(16d2453440200492bb01d83848828ff0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00032.png using Guid(16d2453440200492bb01d83848828ff0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7f3b83b3720b58adf0fd018f023aa19') in 0.044160 seconds
+  Import took 0.056497 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.076359 seconds.
+  path: Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00034.png
+  artifactKey: Guid(aadf01a7300604b1e86e60b72f2562b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00034.png using Guid(aadf01a7300604b1e86e60b72f2562b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e84b64e29d7174234bcf7e6c5987bef5') in 0.060118 seconds
+  Import took 0.072134 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.061412 seconds.
+  path: Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00036.png
+  artifactKey: Guid(a9fb56b3dbef249f6a13b78ca405fdc2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00036.png using Guid(a9fb56b3dbef249f6a13b78ca405fdc2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '931214e666f4c0be78db399f93176185') in 0.061740 seconds
+  Import took 0.075566 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.053320 seconds.
+  path: Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00037.png
+  artifactKey: Guid(70771fbb1e694440bb9c8b8fc991df83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00037.png using Guid(70771fbb1e694440bb9c8b8fc991df83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '555e44fc74f87c1a5009d8e9a32f881b') in 0.054262 seconds
+  Import took 0.065623 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.078955 seconds.
+  path: Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00038.png
+  artifactKey: Guid(02c5a4b748bf448068ce88ee258f80f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00038.png using Guid(02c5a4b748bf448068ce88ee258f80f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '710027e61d3256705bce31b6585659ab') in 0.058875 seconds
+  Import took 0.069601 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.058327 seconds.
+  path: Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00039.png
+  artifactKey: Guid(8a6518b63895747809a33ab01016c111) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00039.png using Guid(8a6518b63895747809a33ab01016c111) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b9382b380319d6d3ddce0ab657f0917') in 0.053161 seconds
+  Import took 0.063750 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.064840 seconds.
+  path: Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00040.png
+  artifactKey: Guid(b610a9ad5fffa4591911a2f8c12cbd18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00040.png using Guid(b610a9ad5fffa4591911a2f8c12cbd18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85ce0464daab9ca4fdfb60a3e627a1a7') in 0.054718 seconds
+  Import took 0.066396 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.063773 seconds.
+  path: Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00042.png
+  artifactKey: Guid(faaa391c7b63142adbb8a89f20602b94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00042.png using Guid(faaa391c7b63142adbb8a89f20602b94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e04d7f304d93488856659bbf4454e444') in 0.057670 seconds
+  Import took 0.068808 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.079839 seconds.
+  path: Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00043.png
+  artifactKey: Guid(6d4c0556a3f974428932e40ffc448eb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00043.png using Guid(6d4c0556a3f974428932e40ffc448eb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9024f60aa4982e1705e9b91267f2135') in 0.058618 seconds
+  Import took 0.070491 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.062706 seconds.
+  path: Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00044.png
+  artifactKey: Guid(7539bb980ae3249f5882f08507b2cf5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00044.png using Guid(7539bb980ae3249f5882f08507b2cf5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20ab623dce54e6995da9c49005ae113d') in 0.059291 seconds
+  Import took 0.069508 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.056723 seconds.
+  path: Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00045.png
+  artifactKey: Guid(015cd6c0d2a804dcbb9ba6795aaaf09a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00045.png using Guid(015cd6c0d2a804dcbb9ba6795aaaf09a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '068fd9731514fb80b240886639ec055f') in 0.096539 seconds
+  Import took 0.112850 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.129374 seconds.
+  path: Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00048.png
+  artifactKey: Guid(8d0a90868f6ec47d59cd644182ebff57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00048.png using Guid(8d0a90868f6ec47d59cd644182ebff57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c5981000187a8d93bcbab58fbe30b3c2') in 0.097027 seconds
+  Import took 0.116166 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.174247 seconds.
+  path: Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00052.png
+  artifactKey: Guid(60d5ed7e416814a4aa9294515e67e0db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00052.png using Guid(60d5ed7e416814a4aa9294515e67e0db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b9d5a0855f80c99d9145180ca892af7') in 0.103594 seconds
+  Import took 0.124243 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.059201 seconds.
+  path: Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00053.png
+  artifactKey: Guid(5971c78d2ecf64d6f8bd0d8ab26b9c91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00053.png using Guid(5971c78d2ecf64d6f8bd0d8ab26b9c91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f8c419e85781ddaea4456b9e11126e45') in 0.099539 seconds
+  Import took 0.123118 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.094469 seconds.
+  path: Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00054.png
+  artifactKey: Guid(39348fee8cea641e587e0f6cbecdac2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00054.png using Guid(39348fee8cea641e587e0f6cbecdac2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ece8a6c945cdc2ec9f7363d1ca43c375') in 0.079379 seconds
+  Import took 0.096242 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.117203 seconds.
+  path: Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00056.png
+  artifactKey: Guid(1c0c33a0e41a44e25a55a971b7770919) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00056.png using Guid(1c0c33a0e41a44e25a55a971b7770919) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb5fb74fcaafdc37e2d9d0c9353b3ed7') in 0.088289 seconds
+  Import took 0.108713 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.136355 seconds.
+  path: Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00059.png
+  artifactKey: Guid(1557c12536b4041949a96067510ca924) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00059.png using Guid(1557c12536b4041949a96067510ca924) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6ab758a8239a9c6c195c98ad1389af3') in 0.080054 seconds
+  Import took 0.100115 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.115952 seconds.
+  path: Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00061.png
+  artifactKey: Guid(85276638c32394575b591124b9d54777) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00061.png using Guid(85276638c32394575b591124b9d54777) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '482517531addbd13177b9d89fe2bb47e') in 0.086758 seconds
+  Import took 0.104472 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.096478 seconds.
+  path: Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00062.png
+  artifactKey: Guid(339d69d7a341a4614928138acac61f1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00062.png using Guid(339d69d7a341a4614928138acac61f1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dcd6d70596935bda557924225d830a36') in 0.089864 seconds
+  Import took 0.105232 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.132573 seconds.
+  path: Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00064.png
+  artifactKey: Guid(8dd8b300582a54fd0a488c352b56fc59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00064.png using Guid(8dd8b300582a54fd0a488c352b56fc59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77762d388f43bc7181cdee689bc6d5b1') in 0.078689 seconds
+  Import took 0.095531 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.117489 seconds.
+  path: Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00066.png
+  artifactKey: Guid(af9587812f0bb40f098799624c76c70e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00066.png using Guid(af9587812f0bb40f098799624c76c70e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b67e6782f9b760451ec39a611198307') in 0.084079 seconds
+  Import took 0.098785 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.119575 seconds.
+  path: Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00068.png
+  artifactKey: Guid(b7f5a08d971c6436a8d0d4dd27ce2025) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00068.png using Guid(b7f5a08d971c6436a8d0d4dd27ce2025) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd06fb44da51e8672be7ab97b4e94adf5') in 0.083215 seconds
+  Import took 0.127685 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.071958 seconds.
+  path: Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00069.png
+  artifactKey: Guid(bcb5e531993e54c3f8212f84d29e06bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00069.png using Guid(bcb5e531993e54c3f8212f84d29e06bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a10ae64ae536797c542e38334e0864f3') in 0.084978 seconds
+  Import took 0.104499 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.119430 seconds.
+  path: Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00071.png
+  artifactKey: Guid(2f5d425c73b7346deb66ad43bc36553c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00071.png using Guid(2f5d425c73b7346deb66ad43bc36553c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b21f41745be1bba08c738d8cee17304') in 0.081406 seconds
+  Import took 0.102106 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.118539 seconds.
+  path: Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00073.png
+  artifactKey: Guid(0074fdee9a2fb4e63b6051589b555bc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00073.png using Guid(0074fdee9a2fb4e63b6051589b555bc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e97b1a490273919f5e57e785ed62c87') in 0.079811 seconds
+  Import took 0.097444 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.119193 seconds.
+  path: Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00075.png
+  artifactKey: Guid(4accd28ae0535453b9f439e93b9c0570) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00075.png using Guid(4accd28ae0535453b9f439e93b9c0570) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd81d600ab6e4dfc601c6fc3f0f57a97') in 0.061342 seconds
+  Import took 0.072373 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.063634 seconds.
+  path: Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00076.png
+  artifactKey: Guid(d41ad13d659f84d1cac8ba0c4a0a26af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00076.png using Guid(d41ad13d659f84d1cac8ba0c4a0a26af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '50b5a8f34c575afc74bd244df318d60a') in 0.053568 seconds
+  Import took 0.065010 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.077262 seconds.
+  path: Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00078.png
+  artifactKey: Guid(21c39e884b5f74a1f939dcb4393cf7e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00078.png using Guid(21c39e884b5f74a1f939dcb4393cf7e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e5096ca953c0b33815ebcd0ca3bda5d') in 0.052457 seconds
+  Import took 0.062484 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.090273 seconds.
+  path: Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00080.png
+  artifactKey: Guid(32c2ea436317e4c43b983c79ea69a483) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00080.png using Guid(32c2ea436317e4c43b983c79ea69a483) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5684a0f58114943af7a0f88a5fdf939b') in 0.053498 seconds
+  Import took 0.064392 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.034201 seconds.
+  path: Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00081.png
+  artifactKey: Guid(8df81356ffb824167b05eb24cb7744bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00081.png using Guid(8df81356ffb824167b05eb24cb7744bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7381566003c7c911792361ea4229d760') in 0.046998 seconds
+  Import took 0.058524 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.073556 seconds.
+  path: Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00083.png
+  artifactKey: Guid(aa0c3b038518544f8889cefb3c4845a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00083.png using Guid(aa0c3b038518544f8889cefb3c4845a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f8f838ce2fef37b00778f34303dc9eaf') in 0.052656 seconds
+  Import took 0.063399 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.060917 seconds.
+  path: Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00084.png
+  artifactKey: Guid(659ac1fc34e1e48118fa898dbd4d3f4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00084.png using Guid(659ac1fc34e1e48118fa898dbd4d3f4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'edacd36b7dc2ebc58600734589fb0ff6') in 0.064160 seconds
+  Import took 0.079540 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.082100 seconds.
+  path: Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00085.png
+  artifactKey: Guid(61fef248f5e454ae8a678a0e27817485) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00085.png using Guid(61fef248f5e454ae8a678a0e27817485) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6a3aa76f229f2742e48d0c9a4603177') in 0.065464 seconds
+  Import took 0.081463 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.106669 seconds.
+  path: Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00087.png
+  artifactKey: Guid(0f3789bda178c48f1878bd90da0d79fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00087.png using Guid(0f3789bda178c48f1878bd90da0d79fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d1ccfb911d1d48b4d4e31011e740ee7') in 0.069717 seconds
+  Import took 0.087787 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.076176 seconds.
+  path: Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00088.png
+  artifactKey: Guid(3919c0b26b48c445490500727b1400f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00088.png using Guid(3919c0b26b48c445490500727b1400f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b0b4e5553e023f6d1689a144db51256') in 0.067373 seconds
+  Import took 0.080531 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.097556 seconds.
+  path: Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00090.png
+  artifactKey: Guid(7e429ad99b4ca41d696825f6567da7eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00090.png using Guid(7e429ad99b4ca41d696825f6567da7eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1214f5a80c47cd96d6ec916c98cd3696') in 0.068148 seconds
+  Import took 0.085502 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.110379 seconds.
+  path: Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00092.png
+  artifactKey: Guid(529aa54b27f9047d0a04bea0e2a94ea3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00092.png using Guid(529aa54b27f9047d0a04bea0e2a94ea3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4bffa7ae67ffae159f1d04f6cfc01b0') in 0.084794 seconds
+  Import took 0.102820 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.198013 seconds.
+  path: Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00096.png
+  artifactKey: Guid(668162a062acf44dd893a50281735f81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00096.png using Guid(668162a062acf44dd893a50281735f81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc166229b96db93890e2027fe21bd67f') in 0.079479 seconds
+  Import took 0.093260 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.071371 seconds.
+  path: Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00098.png
+  artifactKey: Guid(9dd317c10b983447a83f82b7fef4d633) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00098.png using Guid(9dd317c10b983447a83f82b7fef4d633) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77cd5a89e7e8de75af3fd8e344d6d98c') in 0.076955 seconds
+  Import took 0.092891 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.108898 seconds.
+  path: Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00099.png
+  artifactKey: Guid(a04706569351f4bf9adc423faef55488) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00099.png using Guid(a04706569351f4bf9adc423faef55488) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6743dbba4177cfd298be0fb1099955be') in 0.082271 seconds
+  Import took 0.099423 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.112725 seconds.
+  path: Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00101.png
+  artifactKey: Guid(af1144ebb37084f718fe8f461ff82e79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00101.png using Guid(af1144ebb37084f718fe8f461ff82e79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '709528c5a5cb542e3225075b872970a5') in 0.078772 seconds
+  Import took 0.098972 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.140192 seconds.
+  path: Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00103.png
+  artifactKey: Guid(211774765226242d6a63c6380787acb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00103.png using Guid(211774765226242d6a63c6380787acb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd0c891e7b5bdaa0abd8d7aa460e228ef') in 0.076581 seconds
+  Import took 0.097724 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.088342 seconds.
+  path: Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00106.png
+  artifactKey: Guid(7f359ba8c425c4e85b19b3bc000a892d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00106.png using Guid(7f359ba8c425c4e85b19b3bc000a892d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '913dda24a56fb315f5c3c96b8c1464cf') in 0.069790 seconds
+  Import took 0.088155 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.112300 seconds.
+  path: Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00107.png
+  artifactKey: Guid(f688bc61c8cc54009a0a59c31009a811) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00107.png using Guid(f688bc61c8cc54009a0a59c31009a811) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c4ca82b431a65b5bf6b0814a13900c02') in 0.069793 seconds
+  Import took 0.090161 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.148136 seconds.
+  path: Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00109.png
+  artifactKey: Guid(3a67a88a3a0724d37ab734aed24934b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00109.png using Guid(3a67a88a3a0724d37ab734aed24934b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1175d89044ffa093cb7a0dad80ef5c6f') in 0.068965 seconds
+  Import took 0.086482 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.119297 seconds.
+  path: Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00110.png
+  artifactKey: Guid(71ada7049ab5a4ced96b18a473c088f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00110.png using Guid(71ada7049ab5a4ced96b18a473c088f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb7a74ef522667fd69b7dd0d2ba99cff') in 0.043175 seconds
+  Import took 0.054331 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.064032 seconds.
+  path: Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00111.png
+  artifactKey: Guid(ec0b64152df0746558b6de5443e91b79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00111.png using Guid(ec0b64152df0746558b6de5443e91b79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '554991ff8d71f11bb5d0c122a292f7be') in 0.030975 seconds
+  Import took 0.038082 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.032098 seconds.
+  path: Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00112.png
+  artifactKey: Guid(ebca4c98ce94943b3ac643f52e4fc7fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00112.png using Guid(ebca4c98ce94943b3ac643f52e4fc7fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f76cfa9ece47c1811f89e07b36677f71') in 0.029490 seconds
+  Import took 0.039198 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.071995 seconds.
+  path: Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00114.png
+  artifactKey: Guid(4f8e10640a4d14b3d815bc3c49332951) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00114.png using Guid(4f8e10640a4d14b3d815bc3c49332951) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a10a12fd681e21daee08744db697244e') in 0.046761 seconds
+  Import took 0.058156 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.087480 seconds.
+  path: Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00115.png
+  artifactKey: Guid(c2708ced8d00b40e9b87fafdf60159c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Enemy_Explode_Sequence/EnemyTurnLeft0000_00115.png using Guid(c2708ced8d00b40e9b87fafdf60159c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9317a2e9b37c437994814241b4614f4a') in 0.046122 seconds
+  Import took 0.058686 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007314 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.66 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.128 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.17 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2390 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 114.6 MB.
+System memory in use after: 111.9 MB.
+
+Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 2907.
+Total: 10.926700 ms (FindLiveObjects: 0.483300 ms CreateObjectMapping: 0.285000 ms MarkObjects: 5.374500 ms  DeleteObjects: 4.780400 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 70.320555 seconds.
+  path: Assets/Prefabs/Enemy/Enemy.prefab
+  artifactKey: Guid(9d4d26a20fe22274e88568d89c2b14ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Enemy/Enemy.prefab using Guid(9d4d26a20fe22274e88568d89c2b14ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b) The Animator Controller (Enemy 1) you have used is not valid. Animations will not play
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.EditorUtility:Internal_InstantiateRemoveAllNonAnimationComponentsSingle (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateRemoveAllNonAnimationComponents (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateForAnimatorPreview (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:UpdateGameObject (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:.ctor (UnityEngine.Object)
+UnityEditor.GameObjectInspector:GetPreviewData ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:\buildslave\unity\build\Modules/Animation/Director/AnimatorControllerPlayable.cpp line 333]
+
+The Animator Controller (Enemy 1) you have used is not valid. Animations will not play
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.EditorUtility:InitInstantiatedPreviewRecursive (UnityEngine.GameObject)
+UnityEditor.EditorUtility:InstantiateForAnimatorPreview (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:UpdateGameObject (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:.ctor (UnityEngine.Object)
+UnityEditor.GameObjectInspector:GetPreviewData ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:\buildslave\unity\build\Modules/Animation/Director/AnimatorControllerPlayable.cpp line 333]
+
+ -> (artifact id: 'ba9158f141fc12a5a4b980469e490655') in 0.577223 seconds
+  Import took 0.591115 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005467 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.87 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.056 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.58 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2390 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 117.1 MB.
+System memory in use after: 114.3 MB.
+
+Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 2952.
+Total: 8.578100 ms (FindLiveObjects: 0.468400 ms CreateObjectMapping: 0.242900 ms MarkObjects: 4.721100 ms  DeleteObjects: 3.143400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003239 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 2.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.261 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.57 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2390 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 117.0 MB.
+System memory in use after: 114.3 MB.
+
+Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 2955.
+Total: 12.343800 ms (FindLiveObjects: 0.496000 ms CreateObjectMapping: 0.325500 ms MarkObjects: 6.518100 ms  DeleteObjects: 5.000700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007131 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.46 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.901 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.22 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2390 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 117.1 MB.
+System memory in use after: 114.3 MB.
+
+Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 2958.
+Total: 11.638400 ms (FindLiveObjects: 0.717700 ms CreateObjectMapping: 0.376500 ms MarkObjects: 4.955400 ms  DeleteObjects: 5.584400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002122 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.46 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.353 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.93 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2390 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 117.1 MB.
+System memory in use after: 114.3 MB.
+
+Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 2961.
+Total: 6.121300 ms (FindLiveObjects: 0.592100 ms CreateObjectMapping: 0.207900 ms MarkObjects: 2.444500 ms  DeleteObjects: 2.874500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003315 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.55 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.111 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.27 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2390 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 117.1 MB.
+System memory in use after: 114.2 MB.
+
+Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 2964.
+Total: 6.799500 ms (FindLiveObjects: 0.556100 ms CreateObjectMapping: 0.271400 ms MarkObjects: 3.191900 ms  DeleteObjects: 2.777200 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005500 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.29 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.021 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2390 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 117.1 MB.
+System memory in use after: 114.3 MB.
+
+Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 2967.
+Total: 10.764400 ms (FindLiveObjects: 0.861400 ms CreateObjectMapping: 0.436500 ms MarkObjects: 5.502000 ms  DeleteObjects: 3.961200 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003067 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.05 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.892 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.55 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2390 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 117.1 MB.
+System memory in use after: 114.3 MB.
+
+Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 2970.
+Total: 8.788200 ms (FindLiveObjects: 0.815900 ms CreateObjectMapping: 0.399500 ms MarkObjects: 4.038700 ms  DeleteObjects: 3.529800 ms)
+
