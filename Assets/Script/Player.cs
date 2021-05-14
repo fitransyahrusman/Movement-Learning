@@ -86,7 +86,7 @@ public class Player : MonoBehaviour
             newLaserTriple2.transform.parent = _laserContainer.transform;
             newLaserTriple3.transform.parent = _laserContainer.transform;
         }
-        else //if (_isTripleShotActive == false)
+        else 
         {
             _canfire = Time.time + _firerate;
             GameObject newLaser = Instantiate(_laserprefab, transform.position + new Vector3(1.25f, 0f, 0f), Quaternion.Euler(0f,0f,0f));
