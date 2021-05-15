@@ -18,8 +18,14 @@ public class SpawnManager : MonoBehaviour
     private GameObject _PowerupContainer;
     [SerializeField]
     private bool _stopSpawning = false;
+    
    
     void Start()
+    {
+       
+    }
+    
+    public void StartSpawning()
     {
         StartCoroutine("SpawnEnemy");
         StartCoroutine("SpawnAsteroid");
@@ -61,4 +67,5 @@ public class SpawnManager : MonoBehaviour
     {
         _stopSpawning=true;
     }
+
 }

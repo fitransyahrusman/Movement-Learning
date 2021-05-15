@@ -6,6 +6,8 @@ public class Asteroid : MonoBehaviour
 {
     private float _speed = 1.5f;
     private Player _player;
+    [SerializeField]
+    private GameObject _explosionPrefab;
    
 
     private void Start()
@@ -27,6 +29,7 @@ public class Asteroid : MonoBehaviour
         if (other.tag == "Player")
         {
             _player.Damage();
+            GameObject explosion = Instantiate(_explosionPrefab, transform.position + new Vector3(0f, 0f, 0f), Quaternion.identity);
             Destroy(this.gameObject);
         }
         if (other.tag == "Laser")
@@ -36,6 +39,7 @@ public class Asteroid : MonoBehaviour
             {
                 _player.AddScore(50);
             }
+            GameObject explosion = Instantiate(_explosionPrefab, transform.position + new Vector3(0f, 0f, 0f), Quaternion.identity);
             Destroy(this.gameObject);
         }
     }

@@ -13,14 +13,13 @@ GameObject:
   - component: {fileID: 4836546870150390971}
   - component: {fileID: 4836546870150390970}
   - component: {fileID: 4836546870150390949}
-  - component: {fileID: 7613469727592387794}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4836546870150390969
 Transform:
   m_ObjectHideFlags: 0
@@ -145,22 +144,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c6d2bb220e6e3746acb67d60f9c1fba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!95 &7613469727592387794
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4836546870150390948}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d702424667f742f479778bb6209c9832, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  _explosionPrefab: {fileID: 6856393512652185373, guid: d36a0af611782b04c943fa4cfd59f9cf, type: 3}

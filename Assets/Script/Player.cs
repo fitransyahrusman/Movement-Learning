@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -29,7 +30,10 @@ public class Player : MonoBehaviour
     [SerializeField]
     private int _score;
     private UIManager _uiManager;
-    
+
+    [SerializeField]
+    private Text _startGameText;
+
     void Start()
     {
         _shieldVisualizer.SetActive(false); //makesure visualizer always off
@@ -46,6 +50,9 @@ public class Player : MonoBehaviour
         {
             Debug.LogError("The UI Manager script is NULL");
         }
+
+        _startGameText.gameObject.SetActive(true);
+        StartCoroutine(CubeStartFlicker());
     } 
     void Update()
     {
@@ -146,6 +153,24 @@ public class Player : MonoBehaviour
         _score += points;
         _uiManager.UpdateScore(_score);
     }
+
+    IEnumerator CubeStartFlicker()
+    {
+        while (true)
+        {
+            _startGameText.text = "Shoot the Enemy to start!";
+            yield return new WaitForSeconds(0.25f);
+            _startGameText.text = "";
+            yield return new WaitForSeconds(0.25f);
+        }
+    }
+
+    public void RemoveStartText()
+    {
+        _startGameText.gameObject.SetActive(false);
+    }
+
+
 }
    
 

@@ -16,14 +16,14 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     private Text _restartText;
     private GameManager _gameManager;
-    [SerializeField]
-    private Text _cubeStart;
+    
+    
 
    
     void Start()
     {
-        _cubeStart.gameObject.SetActive(true);
-        StartCoroutine(CubeStartFlicker());
+        
+        
         _scoreText.text = "Score is : " + 0;
         _gameoverText.gameObject.SetActive(false);
         _restartText.gameObject.SetActive(false);
@@ -58,16 +58,7 @@ public class UIManager : MonoBehaviour
             yield return new WaitForSeconds(0.25f);
         }
     }
-    IEnumerator CubeStartFlicker()
-    {
-        while (true)
-        {
-            _cubeStart.text = "Shoot the Cube to start!";
-            yield return new WaitForSeconds(0.25f);
-            _cubeStart.text = "";
-            yield return new WaitForSeconds(0.25f);
-        }
-    }
+   
     void GameOverSquence()
     {
         _gameoverText.gameObject.SetActive(true);
