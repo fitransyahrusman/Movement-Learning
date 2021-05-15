@@ -28,15 +28,21 @@ public class Player : MonoBehaviour
     [SerializeField]
     private GameObject _shieldVisualizer;
     [SerializeField]
+    private GameObject _damageLeft, _damageRight;
+    [SerializeField]
     private int _score;
     private UIManager _uiManager;
 
     [SerializeField]
     private Text _startGameText;
+    [SerializeField]
+    private GameObject _explosionPrefab;
 
     void Start()
     {
         _shieldVisualizer.SetActive(false); //makesure visualizer always off
+        _damageLeft.SetActive(false);
+        _damageRight.SetActive(false);
         transform.position = new Vector3 (-7, 0, 0); //starting position
         
         _spawnManager = GameObject.Find("Spawn_Manager").GetComponent<SpawnManager>(); //communication with spawn manager for null checking
@@ -110,9 +116,21 @@ public class Player : MonoBehaviour
         }
         _lives--;
         _uiManager.UpdateLives(_lives); //lives display
-        if (_lives ==0 ) //playerdeath
+
+        if (_lives == 2)
+        {
+            _damageLeft.SetActive(true);
+        }
+        
+        else if (_lives == 1)
+        {
+            _damageRight.SetActive(true);
+        }
+        
+        else if (_lives ==0 ) //playerdeath
         {
             _spawnManager.OnPlayerDeath();
+            GameObject explosion = Instantiate(_explosionPrefab, transform.position + new Vector3(0f, 0f, 0f), Quaternion.identity);
             Destroy(this.gameObject);
            
         }
