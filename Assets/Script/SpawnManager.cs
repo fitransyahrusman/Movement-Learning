@@ -22,47 +22,71 @@ public class SpawnManager : MonoBehaviour
     private bool _stopSpawning = false;
     [SerializeField]
     private int _enemyInstance = 0;
+    private int _enemy2Instance = 0;
     
 
     public void StartSpawning()
     {
         StartCoroutine("SpawnEnemy");
-        StartCoroutine("SpawnAsteroid");
         StartCoroutine(SpawnRandomPowerup());
-        StartCoroutine(SpawnEnemy2());
     }
 
     IEnumerator SpawnEnemy ()
     {
         do
         {
-            float _spawnTimeEnemy = Random.Range(0.5f, 1f); //makespawntime random
-            while (_stopSpawning == false && _enemyInstance < 51)
+            float _spawnTimeEnemy = Random.Range(0.5f, 1.5f); //makespawntime random
+            while (_stopSpawning == false )
             {
                 GameObject newEnemy = Instantiate(_enemyPrefab, new Vector3(12f, Random.Range(-4.5f, 4.5f), 0f), Quaternion.identity) ;
                 newEnemy.transform.parent = _enemyContainer.transform;
                 yield return new WaitForSeconds(_spawnTimeEnemy);
-                _enemyInstance++;
             }
         }
         while (_stopSpawning == false);
     }
+    
+    public void AddEnemyInstance ()
+    {
+        _enemyInstance++;
+        if (_enemyInstance == 50)
+        {
+            ActivateSpawnAsteroid();
+        }
+        
+        else if (_enemyInstance == 75)
+        {
+            ActivateSpawnEnemy2();
+        }
+    }
+    void ActivateSpawnAsteroid()
+    {
+        StartCoroutine(SpawnAsteroid());
+    }
+    void ActivateSpawnEnemy2()
+    {
+        StartCoroutine(SpawnEnemy2());
+    }
+
     IEnumerator SpawnEnemy2()
     {
-        while (_stopSpawning == false)
+        do
         {
-            float _spawnTimeEnemy2 = Random.Range(20f,25f); //makespawntime random
-            yield return new WaitForSeconds(_spawnTimeEnemy2);
-            GameObject newEnemy1 = Instantiate(_enemyPrefab2, new Vector2(11.5f, Random.Range(-4.5f, 4.5f)), Quaternion.identity);
-            newEnemy1.transform.parent = _enemyContainer.transform;
-           
+            float _spawnTimeEnemy2 = Random.Range(2f, 5f); //makespawntime random
+            while (_stopSpawning == false)
+            { 
+                GameObject newEnemy1 = Instantiate(_enemyPrefab2, new Vector2(11.5f, Random.Range(-4.5f, 4.5f)), Quaternion.identity);
+                newEnemy1.transform.parent = _enemyContainer.transform;
+                yield return new WaitForSeconds(_spawnTimeEnemy2);
+            }
         }
+        while (_stopSpawning == false);
     }
     IEnumerator SpawnAsteroid()
     {
         while (_stopSpawning == false)
         {
-            int _spawnTimeAsteroid = Random.Range(10, 15); //makespawntime random
+            int _spawnTimeAsteroid = Random.Range(7, 10); //makespawntime random
             yield return new WaitForSeconds(_spawnTimeAsteroid);
             GameObject newAsteroid = Instantiate(_asteroid, new Vector2(Random.Range(-8f, 0f), 7.2f), Quaternion.identity);
             newAsteroid.transform.parent = _asteroidContainer.transform;

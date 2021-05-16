@@ -8,6 +8,7 @@ public class Enemy : MonoBehaviour
     private Player _player;
     [SerializeField]
     private GameObject _explosionPrefab;
+    private SpawnManager _spawnManager;
 
     private void Start()
     {
@@ -15,6 +16,11 @@ public class Enemy : MonoBehaviour
         if (_player == null)
         {
             Debug.LogError("Player is NULL");
+        }
+        _spawnManager = GameObject.Find("Spawn_Manager").GetComponent<SpawnManager>();
+        if (_spawnManager == null)
+        {
+            Debug.LogError("Spawn Manager is NULL");
         }
     }
 
@@ -40,6 +46,7 @@ public class Enemy : MonoBehaviour
             if ( _player != null)
             {
                 _player.AddScore(25);
+                _spawnManager.AddEnemyInstance();
             }
             GameObject explosion = Instantiate(_explosionPrefab, transform.position + new Vector3(0f, 0f, 0f), Quaternion.identity);
             Destroy(this.gameObject); 

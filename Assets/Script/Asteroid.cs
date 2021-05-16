@@ -8,10 +8,16 @@ public class Asteroid : MonoBehaviour
     private Player _player;
     [SerializeField]
     private GameObject _explosionPrefab;
+    private SpawnManager _spawnManager;
    
     private void Start()
     {
         _player = GameObject.Find("Player").GetComponent<Player>(); //this create error/null after player dead
+        _spawnManager = GameObject.Find("Spawn_Manager").GetComponent<SpawnManager>();
+        if (_spawnManager == null)
+        {
+            Debug.LogError("Spawn Manager is NULL");
+        }
     }
     void Update()
     {
@@ -36,6 +42,7 @@ public class Asteroid : MonoBehaviour
             if (_player != null)
             {
                 _player.AddScore(50);
+                _spawnManager.AddEnemyInstance();
             }
             GameObject explosion = Instantiate(_explosionPrefab, transform.position + new Vector3(0f, 0f, 0f), Quaternion.identity);
             Destroy(this.gameObject);

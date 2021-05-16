@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class Enemy2 : MonoBehaviour
 {
-    private float _speed = 5f;
+    private float _speed = 6f;
     private Player _player;
     [SerializeField]
     private GameObject _explosionPrefab;
+    private SpawnManager _spawnManager;
    
     void Start()
     {
@@ -15,6 +16,11 @@ public class Enemy2 : MonoBehaviour
         if (_player == null)
         {
             Debug.LogError("Player is NULL");
+        }
+        _spawnManager = GameObject.Find("Spawn_Manager").GetComponent<SpawnManager>();
+        if (_spawnManager == null)
+        {
+            Debug.LogError("Spawn Manager is NULL");
         }
     }
 
@@ -40,7 +46,9 @@ public class Enemy2 : MonoBehaviour
             Destroy(other.gameObject);
             if (_player != null)
             {
-                _player.AddScore(25);
+                _player.AddScore(75);
+                _spawnManager.AddEnemyInstance();
+                
             }
             GameObject explosion = Instantiate(_explosionPrefab, transform.position + new Vector3(0f, 0f, 0f), Quaternion.identity);
             Destroy(this.gameObject);
