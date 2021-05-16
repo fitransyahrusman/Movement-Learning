@@ -2,27 +2,32 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Asteroid : MonoBehaviour
+public class Enemy2 : MonoBehaviour
 {
-    private float _speed = 1.5f;
+    private float _speed = 5f;
     private Player _player;
     [SerializeField]
     private GameObject _explosionPrefab;
    
-    private void Start()
+    void Start()
     {
-        _player = GameObject.Find("Player").GetComponent<Player>(); //this create error/null after player dead
-    }
-    void Update()
-    {
-        transform.Translate(new Vector2 (-1f,-1f) * _speed * Time.deltaTime);
-        transform.Rotate(new Vector3 (0,0,5) * 2 * Time.deltaTime);
-        if (transform.position.y < - 7.2f)
+        _player = GameObject.Find("Player").GetComponent<Player>();
+        if (_player == null)
         {
-            transform.position = new Vector2(Random.Range(-12f, 0f), 7.2f);
+            Debug.LogError("Player is NULL");
         }
     }
-    private void OnTriggerEnter2D(Collider2D other)
+
+    // Update is called once per frame
+    void Update()
+    {
+        transform.Translate(Vector3.left * _speed * Time.deltaTime);
+        if (transform.position.x < -11f)
+        {
+            transform.position = new Vector3(12f, Random.Range(-4.2f, 4f), 0f);
+        }
+    }
+    void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Player")
         {
@@ -35,7 +40,7 @@ public class Asteroid : MonoBehaviour
             Destroy(other.gameObject);
             if (_player != null)
             {
-                _player.AddScore(50);
+                _player.AddScore(25);
             }
             GameObject explosion = Instantiate(_explosionPrefab, transform.position + new Vector3(0f, 0f, 0f), Quaternion.identity);
             Destroy(this.gameObject);

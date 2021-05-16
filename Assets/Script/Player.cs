@@ -32,7 +32,7 @@ public class Player : MonoBehaviour
     [SerializeField]
     private int _score;
     private UIManager _uiManager;
-
+    private Enemy _enemy;
     [SerializeField]
     private Text _startGameText;
     [SerializeField]
@@ -44,32 +44,32 @@ public class Player : MonoBehaviour
         _damageLeft.SetActive(false);
         _damageRight.SetActive(false);
         transform.position = new Vector3 (-7, 0, 0); //starting position
-        
         _spawnManager = GameObject.Find("Spawn_Manager").GetComponent<SpawnManager>(); //communication with spawn manager for null checking
         if (_spawnManager == null)
         {
             Debug.LogError ("Spawn Manager is NULL");
         }
-
         _uiManager = GameObject.Find("Canvas").GetComponent<UIManager>();
         if (_uiManager == null)
         {
             Debug.LogError("The UI Manager script is NULL");
         }
-
         _startGameText.gameObject.SetActive(true);
         StartCoroutine(CubeStartFlicker());
+        _enemy = GameObject.Find("Enemy").GetComponent<Enemy>();
+        if (_enemy == null)
+        {
+            Debug.LogError("Failure calling Enemy from Spawn Manager");
+        }
     } 
     void Update()
     {
       codeMovement();
-
      if (Time.time > _canfire)
      {
         codeFiring();
      }
     }
-
     void codeMovement ()
     {
         //input
@@ -84,7 +84,6 @@ public class Player : MonoBehaviour
         transform.position = new Vector3 (transform.position.x, Mathf.Clamp(transform.position.y,-4.808401f, 4.808401f),0f );
         transform.position = new Vector3 (Mathf.Clamp(transform.position.x,-8.382592f ,5f), transform.position.y, 0f);
     }
-
     void codeFiring ()
     {
         if (_isTripleShotActive == true)
@@ -116,23 +115,19 @@ public class Player : MonoBehaviour
         }
         _lives--;
         _uiManager.UpdateLives(_lives); //lives display
-
         if (_lives == 2)
         {
             _damageLeft.SetActive(true);
         }
-        
         else if (_lives == 1)
         {
             _damageRight.SetActive(true);
         }
-        
         else if (_lives ==0 ) //playerdeath
         {
             _spawnManager.OnPlayerDeath();
             GameObject explosion = Instantiate(_explosionPrefab, transform.position + new Vector3(0f, 0f, 0f), Quaternion.identity);
             Destroy(this.gameObject);
-           
         }
     }
     public void TripleShotActive ()
@@ -171,7 +166,6 @@ public class Player : MonoBehaviour
         _score += points;
         _uiManager.UpdateScore(_score);
     }
-
     IEnumerator CubeStartFlicker()
     {
         while (true)
@@ -182,13 +176,10 @@ public class Player : MonoBehaviour
             yield return new WaitForSeconds(0.25f);
         }
     }
-
     public void RemoveStartText()
     {
         _startGameText.gameObject.SetActive(false);
     }
-
-
 }
    
 

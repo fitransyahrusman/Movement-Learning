@@ -8,12 +8,9 @@ public class StartCube : MonoBehaviour
     private GameObject _explosionPrefab;
     private SpawnManager _startSpawning;
     private Player _player;
-    
-  
+
     void Start()
     {
-
-        
         _startSpawning = GameObject.Find("Spawn_Manager").GetComponent<SpawnManager>();
         if (_startSpawning == null)
         {
@@ -24,15 +21,10 @@ public class StartCube : MonoBehaviour
         {
             Debug.LogError("Player is NULL");
         }
-        
-        
-
     }
-
     void Update()
     {
         transform.Rotate(new Vector3(0f, 0f, 5f) * 5f * Time.deltaTime);
-        
     }
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -42,12 +34,7 @@ public class StartCube : MonoBehaviour
             GameObject explosion = Instantiate(_explosionPrefab, transform.position + new Vector3(0f, 0f, 0f), Quaternion.identity);
             _startSpawning.StartSpawning();
             _player.RemoveStartText();
-
             Destroy(this.gameObject);
-            
         }
-    }
-    
-    
-   
+    }   
 }

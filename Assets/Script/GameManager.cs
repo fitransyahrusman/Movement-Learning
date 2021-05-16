@@ -8,8 +8,6 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private bool _isGameover = false;
 
-
-
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.R) && _isGameover == true)
@@ -17,7 +15,6 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene(0);
         }
     }
-
     public void GameOver()
     {
         Debug.Log("GameManager::GameOver() Called");
