@@ -51,14 +51,11 @@ public class SpawnManager : MonoBehaviour
     {
         while (_stopSpawning == false)
         {
-            int _spawnTimeEnemy2 = Random.Range(20,25); //makespawntime random
+            float _spawnTimeEnemy2 = Random.Range(20f,25f); //makespawntime random
             yield return new WaitForSeconds(_spawnTimeEnemy2);
             GameObject newEnemy1 = Instantiate(_enemyPrefab2, new Vector2(11.5f, Random.Range(-4.5f, 4.5f)), Quaternion.identity);
-            GameObject newEnemy2 = Instantiate(_enemyPrefab2, new Vector2(11.5f, Random.Range(-4.5f, 4.5f)), Quaternion.identity);
-            GameObject newEnemy3 = Instantiate(_enemyPrefab2, new Vector2(11.5f, Random.Range(-4.5f, 4.5f)), Quaternion.identity);
             newEnemy1.transform.parent = _enemyContainer.transform;
-            newEnemy2.transform.parent = _enemyContainer.transform;
-            newEnemy3.transform.parent = _enemyContainer.transform;
+           
         }
     }
     IEnumerator SpawnAsteroid()
