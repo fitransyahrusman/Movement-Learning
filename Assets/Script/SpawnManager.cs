@@ -20,9 +20,8 @@ public class SpawnManager : MonoBehaviour
     private GameObject _PowerupContainer;
     [SerializeField]
     private bool _stopSpawning = false;
-    [SerializeField]
     private int _enemyInstance = 0;
-    private int _enemy2Instance = 0;
+    //private int _enemy2Instance = 0; //for next update
     
 
     public void StartSpawning()
@@ -30,7 +29,6 @@ public class SpawnManager : MonoBehaviour
         StartCoroutine("SpawnEnemy");
         StartCoroutine(SpawnRandomPowerup());
     }
-
     IEnumerator SpawnEnemy ()
     {
         do
@@ -45,7 +43,6 @@ public class SpawnManager : MonoBehaviour
         }
         while (_stopSpawning == false);
     }
-    
     public void AddEnemyInstance ()
     {
         _enemyInstance++;
@@ -54,10 +51,11 @@ public class SpawnManager : MonoBehaviour
             ActivateSpawnAsteroid();
         }
         
-        else if (_enemyInstance == 75)
+        else if (_enemyInstance == 100)
         {
             ActivateSpawnEnemy2();
         }
+        //need to add more new type enemies (asteroid coming from below if _enemyInstance = 150
     }
     void ActivateSpawnAsteroid()
     {
@@ -67,7 +65,6 @@ public class SpawnManager : MonoBehaviour
     {
         StartCoroutine(SpawnEnemy2());
     }
-
     IEnumerator SpawnEnemy2()
     {
         do

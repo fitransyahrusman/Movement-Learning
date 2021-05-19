@@ -48,7 +48,6 @@ public class Enemy2 : MonoBehaviour
             {
                 _player.AddScore(75);
                 _spawnManager.AddEnemyInstance();
-                
             }
             GameObject explosion = Instantiate(_explosionPrefab, transform.position + new Vector3(0f, 0f, 0f), Quaternion.identity);
             Destroy(this.gameObject);

@@ -23,7 +23,6 @@ public class Enemy : MonoBehaviour
             Debug.LogError("Spawn Manager is NULL");
         }
     }
-
     void Update()
     {
        transform.Translate(Vector3.left * _speed * Time.deltaTime);

@@ -10,7 +10,6 @@ public class Player : MonoBehaviour
     private float _speedVertical = 4f;
     private float _speedMultiplier = 2f;
     private float _firerate = 0.5f;
-    private float _tripleFirerate = 1.25f;
     private float _canfire = -1f;
     [SerializeField]
     private int _lives = 3;
@@ -31,15 +30,27 @@ public class Player : MonoBehaviour
     private GameObject _damageLeft, _damageRight;
     [SerializeField]
     private int _score;
-    private UIManager _uiManager;
-    private Enemy _enemy;
     [SerializeField]
     private Text _startGameText;
     [SerializeField]
     private GameObject _explosionPrefab;
+    private UIManager _uiManager;
+    //private Enemy _enemy;
+    [SerializeField]
+    private AudioClip _laserSound;
+    private AudioSource _audioSource;
 
     void Start()
     {
+        _audioSource = GetComponent<AudioSource>();
+        if (_audioSource == null)
+        {
+            Debug.LogError("Audio source is NULL");
+        }
+        else
+        {
+            _audioSource.clip = _laserSound;
+        }
         _shieldVisualizer.SetActive(false); //makesure visualizer always off
         _damageLeft.SetActive(false);
         _damageRight.SetActive(false);
@@ -56,11 +67,11 @@ public class Player : MonoBehaviour
         }
         _startGameText.gameObject.SetActive(true);
         StartCoroutine(CubeStartFlicker());
-        _enemy = GameObject.Find("Enemy").GetComponent<Enemy>();
-        if (_enemy == null)
-        {
-            Debug.LogError("Failure calling Enemy from Spawn Manager");
-        }
+        //_enemy = GameObject.Find("Enemy").GetComponent<Enemy>();
+        //if (_enemy == null)
+        //{
+        //    Debug.LogError("Failure calling Enemy from Spawn Manager");
+        //}
     } 
     void Update()
     {
@@ -68,10 +79,12 @@ public class Player : MonoBehaviour
      if (Time.time > _canfire)
      {
         codeFiring();
-     }
+            
+        }
     }
     void codeMovement ()
     {
+       
         //input
         float rightInput = Input.GetAxis("Right");
         float leftInput = Input.GetAxis("Left");
@@ -88,11 +101,14 @@ public class Player : MonoBehaviour
     {
         if (_isTripleShotActive == true)
         {
-            _canfire = Time.time + _tripleFirerate;
+            _audioSource.Play();
+            _canfire = Time.time + _firerate;
             GameObject newLaserTriple1 = Instantiate(_laserprefab, transform.position + new Vector3(1.25f, 0f, 0f), Quaternion.Euler (0f,0f,0f));
-            _canfire = Time.time + _tripleFirerate;
+            _audioSource.Play();
+            _canfire = Time.time + _firerate;
             GameObject newLaserTriple2 = Instantiate(_laserprefab, transform.position + new Vector3(1.5f, 0.25f, 0f), Quaternion.Euler(0f, 0f, 5f));
-            _canfire = Time.time + _tripleFirerate;
+            _audioSource.Play();
+            _canfire = Time.time + _firerate;
             GameObject newLaserTriple3 = Instantiate(_laserprefab, transform.position + new Vector3(1.5f, -0.25f, 0f), Quaternion.Euler(0f, 0f, -5f));
             newLaserTriple1.transform.parent = _laserContainer.transform;
             newLaserTriple2.transform.parent = _laserContainer.transform;
@@ -100,9 +116,11 @@ public class Player : MonoBehaviour
         }
         else 
         {
+            _audioSource.Play();
             _canfire = Time.time + _firerate;
             GameObject newLaser = Instantiate(_laserprefab, transform.position + new Vector3(1.25f, 0f, 0f), Quaternion.Euler(0f,0f,0f));
             newLaser.transform.parent = _laserContainer.transform;
+            
         }
     }
     public void Damage()
@@ -137,7 +155,7 @@ public class Player : MonoBehaviour
     }
     IEnumerator CoolDownTripleShot()
     {
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(15f);
         _isTripleShotActive = false;
     }
     public void SpeedActive ()
@@ -150,7 +168,7 @@ public class Player : MonoBehaviour
     }
     IEnumerator CoolDownSpeed ()
     {
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(15f);
         _isSpeedActive = false;
         _speedRight /= _speedMultiplier; //this cause if statement not necessary
         _speedLeft /= _speedMultiplier;
