@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class Player : MonoBehaviour
 {
@@ -39,7 +40,13 @@ public class Player : MonoBehaviour
     [SerializeField]
     private AudioClip _laserSound;
     private AudioSource _audioSource;
+    private Animator _anim;
 
+   
+    private float _horizontalInput;
+    [SerializeField]
+    private float _verticalInput;
+    
     void Start()
     {
         _audioSource = GetComponent<AudioSource>();
@@ -72,6 +79,11 @@ public class Player : MonoBehaviour
         //{
         //    Debug.LogError("Failure calling Enemy from Spawn Manager");
         //}
+
+        if (_anim == null)
+        {
+            _anim = GetComponent<Animator>();
+        }
     } 
     void Update()
     {
@@ -80,22 +92,50 @@ public class Player : MonoBehaviour
      {
         codeFiring();
             
-        }
+     }
+        animationMovement();
     }
     void codeMovement ()
     {
-       
         //input
-        float rightInput = Input.GetAxis("Right");
-        float leftInput = Input.GetAxis("Left");
-        float VerticalInput = Input.GetAxis("Vertical");
+       
+        _horizontalInput = CrossPlatformInputManager.GetAxis("Horizontal") ; // Input.GetAxis("Right");
+        //float leftInput = CrossPlatformInputManager.GetAxis("left"); // Input.GetAxis("Left");
+        _verticalInput  = CrossPlatformInputManager.GetAxis("Vertical"); // Input.GetAxis("Vertical");
         //movement
-        transform.Translate(Vector3.right * rightInput * _speedRight * Time.deltaTime);
-        transform.Translate(Vector3.right * leftInput * _speedLeft * Time.deltaTime);
-        transform.Translate(Vector3.up * VerticalInput * _speedVertical * Time.deltaTime);
+        transform.Translate(Vector3.right * _horizontalInput * _speedVertical * Time.deltaTime);
+        // call animator left here
+        
+        
+        
+         
+        
+       // transform.Translate(Vector3.right * leftInput * _speedLeft * Time.deltaTime);
+        transform.Translate(Vector3.up * _verticalInput * _speedVertical * Time.deltaTime);
+        //call animator right here
+      
         //bounds
         transform.position = new Vector3 (transform.position.x, Mathf.Clamp(transform.position.y,-4.808401f, 4.808401f),0f );
         transform.position = new Vector3 (Mathf.Clamp(transform.position.x,-8.382592f ,5f), transform.position.y, 0f);
+    }
+
+    void animationMovement()
+    {
+        if (_verticalInput > 0f)
+        {
+            _anim.SetBool("PlayerTurnleft", true);
+            _anim.SetBool("PlayerTurnright", false);
+        }
+        else if (_verticalInput < 0f)
+        {
+            _anim.SetBool("PlayerTurnleft", false);
+            _anim.SetBool("PlayerTurnright", true);
+        }
+        else
+        {
+            _anim.SetBool("PlayerTurnleft", false);
+            _anim.SetBool("PlayerTurnright", false);
+        }
     }
     void codeFiring ()
     {
@@ -119,8 +159,7 @@ public class Player : MonoBehaviour
             _audioSource.Play();
             _canfire = Time.time + _firerate;
             GameObject newLaser = Instantiate(_laserprefab, transform.position + new Vector3(1.25f, 0f, 0f), Quaternion.Euler(0f,0f,0f));
-            newLaser.transform.parent = _laserContainer.transform;
-            
+            newLaser.transform.parent = _laserContainer.transform;       
         }
     }
     public void Damage()
