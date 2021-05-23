@@ -3,15 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityStandardAssets.CrossPlatformInput;
+using UnityEngine.EventSystems;
 
 public class Player : MonoBehaviour
 {
+    //protected Joystick joystick;
+    //movement and firing
     private float _speedRight = 7.5f;
     private float _speedLeft = 4f;
     private float _speedVertical = 4f;
+    private float _horizontalInput;
+    [SerializeField]
+    private float _verticalInput;
     private float _speedMultiplier = 2f;
     private float _firerate = 0.5f;
     private float _canfire = -1f;
+    
+    //gameplay
     [SerializeField]
     private int _lives = 3;
     private SpawnManager _spawnManager;
@@ -31,28 +39,31 @@ public class Player : MonoBehaviour
     private GameObject _damageLeft, _damageRight;
     [SerializeField]
     private GameObject _thruster;
+    [SerializeField]
+    private GameObject _explosionPrefab;
 
+    //UI
     [SerializeField]
     private int _score;
     [SerializeField]
     private Text _startGameText;
-    [SerializeField]
-    private GameObject _explosionPrefab;
     private UIManager _uiManager;
-    //private Enemy _enemy;
+    
+    
+    //audio
     [SerializeField]
     private AudioClip _laserSound;
     private AudioSource _audioSource;
     private Animator _anim;
 
    
-    private float _horizontalInput;
-    [SerializeField]
-    private float _verticalInput;
-    
+
     void Start()
     {
-        _audioSource = GetComponent<AudioSource>();
+        //joystick = FindObjectOfType<Joystick>();
+        transform.position = new Vector3(-7, 0, 0);//set position
+
+        _audioSource = GetComponent<AudioSource>(); //audio null check
         if (_audioSource == null)
         {
             Debug.LogError("Audio source is NULL");
@@ -61,68 +72,59 @@ public class Player : MonoBehaviour
         {
             _audioSource.clip = _laserSound;
         }
-        _shieldVisualizer.SetActive(false); //makesure visualizer always off
+
+        _shieldVisualizer.SetActive(false);//gameplay element
         _damageLeft.SetActive(false);
         _damageRight.SetActive(false);
         _thruster.SetActive(false);
-        transform.position = new Vector3 (-7, 0, 0); //starting position
+        
         _spawnManager = GameObject.Find("Spawn_Manager").GetComponent<SpawnManager>(); //communication with spawn manager for null checking
         if (_spawnManager == null)
         {
             Debug.LogError ("Spawn Manager is NULL");
         }
-        _uiManager = GameObject.Find("Canvas").GetComponent<UIManager>();
+        _uiManager = GameObject.Find("Canvas").GetComponent<UIManager>(); //communication with UI manager for null checking
         if (_uiManager == null)
         {
             Debug.LogError("The UI Manager script is NULL");
         }
         _startGameText.gameObject.SetActive(true);
         StartCoroutine(CubeStartFlicker());
-        //_enemy = GameObject.Find("Enemy").GetComponent<Enemy>();
-        //if (_enemy == null)
-        //{
-        //    Debug.LogError("Failure calling Enemy from Spawn Manager");
-        //}
+        
 
-        if (_anim == null)
+        if (_anim == null) //communication with animator for null checking
         {
             _anim = GetComponent<Animator>();
         }
+       
     } 
     void Update()
     {
       codeMovement();
-     if (Time.time > _canfire)
-     {
-        codeFiring();
-            
-     }
-        animationMovement();
+      animationMovement();
+        if (Time.time > _canfire)
+        {
+            codeFiring();     
+        } 
+       
+        
+        
     }
+   
+
+
     void codeMovement ()
     {
-        //input
-       
-        _horizontalInput = CrossPlatformInputManager.GetAxis("Horizontal") ; // Input.GetAxis("Right");
-        //float leftInput = CrossPlatformInputManager.GetAxis("left"); // Input.GetAxis("Left");
-        _verticalInput  = CrossPlatformInputManager.GetAxis("Vertical"); // Input.GetAxis("Vertical");
         //movement
+        //float horizontalInput = joystick.Horizontal;  
+         _horizontalInput = CrossPlatformInputManager.GetAxis("Horizontal") ; 
+        _verticalInput  = CrossPlatformInputManager.GetAxis("Vertical"); 
         transform.Translate(Vector3.right * _horizontalInput * _speedVertical * Time.deltaTime);
-        // call animator left here
-        
-        
-        
-         
-        
-       // transform.Translate(Vector3.right * leftInput * _speedLeft * Time.deltaTime);
         transform.Translate(Vector3.up * _verticalInput * _speedVertical * Time.deltaTime);
-        //call animator right here
-      
         //bounds
         transform.position = new Vector3 (transform.position.x, Mathf.Clamp(transform.position.y,-4.808401f, 4.808401f),0f );
         transform.position = new Vector3 (Mathf.Clamp(transform.position.x,-8.382592f ,5f), transform.position.y, 0f);
     }
-
     void animationMovement()
     {
         if (_verticalInput > 0f)
@@ -171,7 +173,7 @@ public class Player : MonoBehaviour
         if (_isShieldActive == true)
         {
             _isShieldActive = false; //shieldcooldown
-            _shieldVisualizer.SetActive(false); //turn of visualizer
+            _shieldVisualizer.SetActive(false); //turn off visualizer
             return;
         }
         _lives--;
@@ -228,6 +230,7 @@ public class Player : MonoBehaviour
     {
         _score += points;
         _uiManager.UpdateScore(_score);
+        
     }
     IEnumerator CubeStartFlicker()
     {
