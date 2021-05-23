@@ -30,6 +30,9 @@ public class Player : MonoBehaviour
     [SerializeField]
     private GameObject _damageLeft, _damageRight;
     [SerializeField]
+    private GameObject _thruster;
+
+    [SerializeField]
     private int _score;
     [SerializeField]
     private Text _startGameText;
@@ -61,6 +64,7 @@ public class Player : MonoBehaviour
         _shieldVisualizer.SetActive(false); //makesure visualizer always off
         _damageLeft.SetActive(false);
         _damageRight.SetActive(false);
+        _thruster.SetActive(false);
         transform.position = new Vector3 (-7, 0, 0); //starting position
         _spawnManager = GameObject.Find("Spawn_Manager").GetComponent<SpawnManager>(); //communication with spawn manager for null checking
         if (_spawnManager == null)
@@ -200,6 +204,7 @@ public class Player : MonoBehaviour
     public void SpeedActive ()
     {
         _isSpeedActive = true;
+        _thruster.SetActive(true);
         _speedRight *= _speedMultiplier; //this cause if statement not necessary
         _speedLeft *= _speedMultiplier;
         _speedVertical *= _speedMultiplier; 
@@ -209,6 +214,7 @@ public class Player : MonoBehaviour
     {
         yield return new WaitForSeconds(15f);
         _isSpeedActive = false;
+        _thruster.SetActive(false);
         _speedRight /= _speedMultiplier; //this cause if statement not necessary
         _speedLeft /= _speedMultiplier;
         _speedVertical /= _speedMultiplier;
