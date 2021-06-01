@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityStandardAssets.CrossPlatformInput;
@@ -7,20 +6,13 @@ using UnityEngine.EventSystems;
 
 public class Player : MonoBehaviour
 {
-    //protected Joystick joystick;
-    //movement and firing
-    private float _speedRight = 7.5f;
-    private float _speedLeft = 4f;
-    private float _speedVertical = 4f;
+    private float _speed = 4f;
     private float _horizontalInput;
-    [SerializeField]
     private float _verticalInput;
     private float _speedMultiplier = 2f;
     private float _firerate = 0.5f;
     private float _canfire = -1f;
-    
-    //gameplay
-    [SerializeField]
+    [SerializeField]  //gameplay
     private int _lives = 3;
     private SpawnManager _spawnManager;
     [SerializeField]
@@ -41,28 +33,18 @@ public class Player : MonoBehaviour
     private GameObject _thruster;
     [SerializeField]
     private GameObject _explosionPrefab;
-
-    //UI
-    [SerializeField]
+    [SerializeField] //UI
     private int _score;
     [SerializeField]
     private Text _startGameText;
     private UIManager _uiManager;
-    
-    
-    //audio
-    [SerializeField]
+    [SerializeField] //audio
     private AudioClip _laserSound;
     private AudioSource _audioSource;
     private Animator _anim;
-
-   
-
     void Start()
     {
-        //joystick = FindObjectOfType<Joystick>();
         transform.position = new Vector3(-7, 0, 0);//set position
-
         _audioSource = GetComponent<AudioSource>(); //audio null check
         if (_audioSource == null)
         {
@@ -72,12 +54,10 @@ public class Player : MonoBehaviour
         {
             _audioSource.clip = _laserSound;
         }
-
         _shieldVisualizer.SetActive(false);//gameplay element
         _damageLeft.SetActive(false);
         _damageRight.SetActive(false);
         _thruster.SetActive(false);
-        
         _spawnManager = GameObject.Find("Spawn_Manager").GetComponent<SpawnManager>(); //communication with spawn manager for null checking
         if (_spawnManager == null)
         {
@@ -90,13 +70,10 @@ public class Player : MonoBehaviour
         }
         _startGameText.gameObject.SetActive(true);
         StartCoroutine(CubeStartFlicker());
-        
-
         if (_anim == null) //communication with animator for null checking
         {
             _anim = GetComponent<Animator>();
         }
-       
     } 
     void Update()
     {
@@ -106,23 +83,14 @@ public class Player : MonoBehaviour
         {
             codeFiring();     
         } 
-       
-        
-        
     }
-   
-
-
     void codeMovement ()
     {
-        //movement
-        //float horizontalInput = joystick.Horizontal;  
-         _horizontalInput = CrossPlatformInputManager.GetAxis("Horizontal") ; 
+        _horizontalInput = CrossPlatformInputManager.GetAxis("Horizontal");  //movement
         _verticalInput  = CrossPlatformInputManager.GetAxis("Vertical"); 
-        transform.Translate(Vector3.right * _horizontalInput * _speedVertical * Time.deltaTime);
-        transform.Translate(Vector3.up * _verticalInput * _speedVertical * Time.deltaTime);
-        //bounds
-        transform.position = new Vector3 (transform.position.x, Mathf.Clamp(transform.position.y,-4.808401f, 4.808401f),0f );
+        transform.Translate(Vector3.right * _horizontalInput * _speed * Time.deltaTime);
+        transform.Translate(Vector3.up * _verticalInput * _speed * Time.deltaTime);
+        transform.position = new Vector3 (transform.position.x, Mathf.Clamp(transform.position.y,-4.808401f, 4.808401f),0f ); //bounds
         transform.position = new Vector3 (Mathf.Clamp(transform.position.x,-8.382592f ,5f), transform.position.y, 0f);
     }
     void animationMovement()
@@ -207,9 +175,7 @@ public class Player : MonoBehaviour
     {
         _isSpeedActive = true;
         _thruster.SetActive(true);
-        _speedRight *= _speedMultiplier; //this cause if statement not necessary
-        _speedLeft *= _speedMultiplier;
-        _speedVertical *= _speedMultiplier; 
+        _speed *= _speedMultiplier; //this cause if statement not necessary
         StartCoroutine(CoolDownSpeed());
     }
     IEnumerator CoolDownSpeed ()
@@ -217,9 +183,7 @@ public class Player : MonoBehaviour
         yield return new WaitForSeconds(15f);
         _isSpeedActive = false;
         _thruster.SetActive(false);
-        _speedRight /= _speedMultiplier; //this cause if statement not necessary
-        _speedLeft /= _speedMultiplier;
-        _speedVertical /= _speedMultiplier;
+        _speed /= _speedMultiplier; //this cause if statement not necessary  
     }
     public void ShieldActive ()
     {
@@ -229,8 +193,7 @@ public class Player : MonoBehaviour
     public void AddScore(int points)
     {
         _score += points;
-        _uiManager.UpdateScore(_score);
-        
+        _uiManager.UpdateScore(_score);   
     }
     IEnumerator CubeStartFlicker()
     {

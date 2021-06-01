@@ -9,7 +9,6 @@ public class Enemy2 : MonoBehaviour
     [SerializeField]
     private GameObject _explosionPrefab;
     private SpawnManager _spawnManager;
-   
     void Start()
     {
         _player = GameObject.Find("Player").GetComponent<Player>();
@@ -23,8 +22,6 @@ public class Enemy2 : MonoBehaviour
             Debug.LogError("Spawn Manager is NULL");
         }
     }
-
-    // Update is called once per frame
     void Update()
     {
         transform.Translate(Vector3.left * _speed * Time.deltaTime);

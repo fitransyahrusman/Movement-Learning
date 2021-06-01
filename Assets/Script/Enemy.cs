@@ -9,7 +9,6 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     private GameObject _explosionPrefab;
     private SpawnManager _spawnManager;
-
     private void Start()
     {
         _player = GameObject.Find("Player").GetComponent<Player>();

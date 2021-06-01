@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
@@ -24,7 +23,6 @@ public class SpawnManager : MonoBehaviour
     private bool _stopSpawning = false;
     [SerializeField]
     private int _enemyInstance = 0;
-   
     public void StartSpawning()
     {
         StartCoroutine("SpawnEnemy");
@@ -85,7 +83,6 @@ public class SpawnManager : MonoBehaviour
         {
             ActivateSpawnAsteroid();
         }
-        
         else if (_enemyInstance == 100)
         {
             ActivateSpawnEnemy2();
@@ -93,8 +90,7 @@ public class SpawnManager : MonoBehaviour
         else if (_enemyInstance == 150)
         {
             ActivateSpawnAsteroid2();
-        }
-        //need to add more new type enemies for enemy == 200
+        } //need to add more new type enemies for enemy == 200
     }
     void ActivateSpawnAsteroid()
     {
@@ -108,8 +104,6 @@ public class SpawnManager : MonoBehaviour
     {
         StartCoroutine(SpawnAsteroid2());
     }
-   
-    
     IEnumerator SpawnRandomPowerup()
     {
         while (_stopSpawning == false)

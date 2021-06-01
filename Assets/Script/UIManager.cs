@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -23,33 +22,19 @@ public class UIManager : MonoBehaviour
     private GameManager _gameManager;
     [SerializeField]
     private GameObject _pausePanel;
-    
-    
-       
     void Start()
     {
         _scoreText.text = "Score is : " + 0;
         _gameoverText.gameObject.SetActive(false);
         _restartText.gameObject.SetActive(false);
         _pausePanel.gameObject.SetActive(false);
-
-        
-        
         _gameManager = GameObject.Find("Game_Manager").GetComponent<GameManager>();
         if ( _gameManager == null)
         {
             Debug.LogError("Game Manager in Null");
         }
-
         _bestScore = PlayerPrefs.GetInt("Highscore", 0);
         _besTScoreText.text = "Best score : " + _bestScore;
-
-    }
-    private void Update()
-    {
-        
-           
-        
     }
     public void UpdateScore (int playerScore)
     {
@@ -65,7 +50,6 @@ public class UIManager : MonoBehaviour
             PlayerPrefs.SetInt("Highscore", _bestScore);
         }
     }
-
     public void UpdateLives(int currentLives)
     {
         _liveImg.sprite = _livesSprite[currentLives];
@@ -99,7 +83,6 @@ public class UIManager : MonoBehaviour
     }
     public void ResumeGame()
     {
-        
         Time.timeScale = 1;
         _pausePanel.gameObject.SetActive(false);
     }

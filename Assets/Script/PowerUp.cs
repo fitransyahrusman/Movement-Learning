@@ -9,7 +9,6 @@ public class PowerUp : MonoBehaviour
     private int powerupsID; //0=3ple shoot, 1=speed, 2=shield.
     [SerializeField]
     private AudioClip _powerupSound;
-
     void Update()
     {
         transform.Translate(new Vector2(-1f, 0f) * _speed * Time.deltaTime);

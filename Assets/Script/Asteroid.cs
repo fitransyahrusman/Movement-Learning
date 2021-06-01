@@ -9,7 +9,6 @@ public class Asteroid : MonoBehaviour
     [SerializeField]
     private GameObject _explosionPrefab;
     private SpawnManager _spawnManager;
-   
     private void Start()
     {
         _player = GameObject.Find("Player").GetComponent<Player>(); //this create error/null after player dead
@@ -27,13 +26,6 @@ public class Asteroid : MonoBehaviour
         {
             transform.position = new Vector2(Random.Range(-12f, 0f), 7.2f);
         }
-        /*for next asteroid (below) 
-        transform.Translate(new Vector2(-1f, 1f) * _speed * Time.deltaTime);
-        transform.Rotate(new Vector3(0, 0, -5) * 3 * Time.deltaTime);
-        if (transform.position.y > 7.2f )
-        {
-            transform.position = new Vector3(Random.Range(-12f, 0f), -7.2f);
-        } */
     }
     private void OnTriggerEnter2D(Collider2D other)
     {

@@ -9,8 +9,6 @@ public class Asteroid2 : MonoBehaviour
     [SerializeField]
     private GameObject _explosionPrefab;
     private SpawnManager _spawnManager;
-
-    // Start is called before the first frame update
     void Start()
     {
         _player = GameObject.Find("Player").GetComponent<Player>(); //this create error/null after player dead
@@ -20,8 +18,6 @@ public class Asteroid2 : MonoBehaviour
             Debug.LogError("Spawn Manager is NULL");
         }
     }
-
-    // Update is called once per frame
     void Update()
     {
         transform.Translate(new Vector2(-1f, 1f) * _speed * Time.deltaTime);

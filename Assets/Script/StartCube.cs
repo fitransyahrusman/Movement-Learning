@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class StartCube : MonoBehaviour
@@ -8,7 +6,6 @@ public class StartCube : MonoBehaviour
     private GameObject _explosionPrefab;
     private SpawnManager _startSpawning;
     private Player _player;
-
     void Start()
     {
         _startSpawning = GameObject.Find("Spawn_Manager").GetComponent<SpawnManager>();

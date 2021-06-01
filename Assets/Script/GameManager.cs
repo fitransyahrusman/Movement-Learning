@@ -8,7 +8,6 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField]
     private bool _isGameover = false;
-
     void Update()
     {
         if ( Input.anyKeyDown && _isGameover == true)
