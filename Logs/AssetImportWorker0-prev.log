@@ -15,11 +15,11 @@ C:/Users/Fitransyah/Movement Learning
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-65371
+53227
 Successfully changed project path to: C:/Users/Fitransyah/Movement Learning
 C:/Users/Fitransyah/Movement Learning
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 467.18 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 142.07 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.8f1 (507919d4fff5)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.8f1/Editor/Data/Resources/UnitySubsystems
@@ -36,18 +36,180 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.8f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.8f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.8f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56532
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56712
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.8f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.8f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.023761 seconds.
+Registered in 0.004062 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 207.19 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 109.43 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  6.991 seconds
+- Completed reload, in  3.972 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.005797 seconds.
+Registered in 0.006900 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 125.43 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+GPGSUpgrader start
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+GooglePlayGames.Editor.GPGSUpgrader:.cctor () (at Assets/GooglePlayGames/Editor/GPGSUpgrader.cs:38)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Assets/GooglePlayGames/Editor/GPGSUpgrader.cs Line: 38)
+
+GPGSUpgrader done
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+GooglePlayGames.Editor.GPGSUpgrader:.cctor () (at Assets/GooglePlayGames/Editor/GPGSUpgrader.cs:105)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Assets/GooglePlayGames/Editor/GPGSUpgrader.cs Line: 105)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  2.206 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
+Refreshing native plugins compatible for Editor in 1.36 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3135 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 151.2 MB.
+System memory in use after: 150.7 MB.
+
+Unloading 67 unused Assets to reduce memory usage. Loaded Objects now: 3539.
+Total: 5.016600 ms (FindLiveObjects: 0.439800 ms CreateObjectMapping: 0.308800 ms MarkObjects: 3.319200 ms  DeleteObjects: 0.947200 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Script/GameManager.cs
+  artifactKey: Guid(be51a031cd4ab5b4a9d721a8f2a6ed7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/GameManager.cs using Guid(be51a031cd4ab5b4a9d721a8f2a6ed7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55651f38d89acc956f5cfbd50f8e69a1') in 0.102176 seconds
+  Import took 0.111265 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000428 seconds.
+  path: Assets/Script/UIManager.cs
+  artifactKey: Guid(ba1675c582dd73a4885b79bc086d7bf6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/UIManager.cs using Guid(ba1675c582dd73a4885b79bc086d7bf6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a04284a01447af8d9563b99d2dce5fb') in 0.015323 seconds
+  Import took 0.026092 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 103.841589 seconds.
+  path: Assets/Scene/Game.unity
+  artifactKey: Guid(da0ef3c375a78c04995dfb6555f78736) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scene/Game.unity using Guid(da0ef3c375a78c04995dfb6555f78736) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e3dff8aaef351838dab15790b162dcf8') in 0.035756 seconds
+  Import took 0.048495 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 506.868831 seconds.
+  path: Assets/Sprites/pause icon.png
+  artifactKey: Guid(ffcaa76713143064c92b208891485a9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/pause icon.png using Guid(ffcaa76713143064c92b208891485a9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '94b3c44f74f05fc2dfa67a2eaf2e34f8') in 0.342610 seconds
+  Import took 0.352678 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 943.831920 seconds.
+  path: Assets/Sprites/White Ring for Joystick.png
+  artifactKey: Guid(8fd1bc311b02e10458615869d67c054c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/White Ring for Joystick.png using Guid(8fd1bc311b02e10458615869d67c054c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a548d5903097adf48add1b0497c3df2f') in 0.029183 seconds
+  Import took 0.045543 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.968861 seconds.
+  path: Assets/Sprites/White Button for Joystick.png
+  artifactKey: Guid(90e74ad781d3c5440aa9fb6588b9f2a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/White Button for Joystick.png using Guid(90e74ad781d3c5440aa9fb6588b9f2a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9925ebdeb783cca15bd74a420ec6c7d7') in 0.026190 seconds
+  Import took 0.033920 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 73.059537 seconds.
+  path: Assets/Sprites/White Button for Joystick.png
+  artifactKey: Guid(90e74ad781d3c5440aa9fb6588b9f2a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/White Button for Joystick.png using Guid(90e74ad781d3c5440aa9fb6588b9f2a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84e37b6383cd07019ff919bf2cc08924') in 0.024203 seconds
+  Import took 0.033747 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.042098 seconds.
+  path: Assets/Sprites/White Ring for Joystick.png
+  artifactKey: Guid(8fd1bc311b02e10458615869d67c054c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/White Ring for Joystick.png using Guid(8fd1bc311b02e10458615869d67c054c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '62423cec7f63994b899c076a06e042c9') in 0.034854 seconds
+  Import took 0.072888 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 54.113104 seconds.
+  path: Assets/Sprites/White Button for Joystick.png
+  artifactKey: Guid(90e74ad781d3c5440aa9fb6588b9f2a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/White Button for Joystick.png using Guid(90e74ad781d3c5440aa9fb6588b9f2a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d6d7cb5cef5e8fcffa806e6f7e9bb22') in 0.020810 seconds
+  Import took 0.030275 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007320 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.46 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+GPGSUpgrader start
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+GooglePlayGames.Editor.GPGSUpgrader:.cctor () (at Assets/GooglePlayGames/Editor/GPGSUpgrader.cs:38)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Assets/GooglePlayGames/Editor/GPGSUpgrader.cs Line: 38)
+
+GPGSUpgrader done
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+GooglePlayGames.Editor.GPGSUpgrader:.cctor () (at Assets/GooglePlayGames/Editor/GPGSUpgrader.cs:105)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Assets/GooglePlayGames/Editor/GPGSUpgrader.cs Line: 105)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  2.231 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 2.21 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2992 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 142.2 MB.
+System memory in use after: 141.7 MB.
+
+Unloading 60 unused Assets to reduce memory usage. Loaded Objects now: 3548.
+Total: 6.430600 ms (FindLiveObjects: 0.684600 ms CreateObjectMapping: 0.401000 ms MarkObjects: 4.607200 ms  DeleteObjects: 0.735200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file

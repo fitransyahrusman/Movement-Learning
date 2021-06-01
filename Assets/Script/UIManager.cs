@@ -20,6 +20,7 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     private Text _restartText;
     private GameManager _gameManager;
+    private LeaderboardManager _leaderboardManager;
     [SerializeField]
     private GameObject _pausePanel;
     void Start()
@@ -32,6 +33,11 @@ public class UIManager : MonoBehaviour
         if ( _gameManager == null)
         {
             Debug.LogError("Game Manager in Null");
+        }
+        _leaderboardManager = GameObject.Find("Leaderboard_Manager").GetComponent<LeaderboardManager>();
+        if (_leaderboardManager==null)
+        {
+            Debug.LogError("Leaderboard manager failed from UI manager");
         }
         _bestScore = PlayerPrefs.GetInt("Highscore", 0);
         _besTScoreText.text = "Best score : " + _bestScore;
@@ -48,6 +54,7 @@ public class UIManager : MonoBehaviour
             _bestScore = _score;
             _besTScoreText.text = "Best score : " + _bestScore;
             PlayerPrefs.SetInt("Highscore", _bestScore);
+           // _leaderboardManager.AddScoreToLeaderboard(_bestScore);
         }
     }
     public void UpdateLives(int currentLives)

@@ -1,0 +1,34 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using GooglePlayGames;
+using UnityEngine.SocialPlatforms;
+
+public class LeaderboardManager : MonoBehaviour
+{
+    private UIManager _uiManager;
+    private int _endScore;
+    void Start()
+    {
+        _uiManager = GameObject.Find("Canvas").GetComponent<UIManager>();
+        if (_uiManager==null)
+        {
+            Debug.LogError("UI Manager failed from Leaderboard Manager");
+        }
+    }
+    public void Login()
+    {
+        Social.localUser.Authenticate((bool success) => { });
+    }
+    /*public void AddScoreToLeaderboard(int UIscore)
+    {
+        _endScore = UIscore;
+        Social.ReportScore(_endScore, Leaderboards.leaderboard_high_score, (bool success) => { });
+    }*/
+    public void  ShowLeaderboard()
+    {
+        //Social.ShowLeaderboardUI();
+        PlayGamesPlatform.Instance.ShowLeaderboardUI(Leaderboards.leaderboard_high_score);
+        //PlayGamesPlatform.Instance.ShowLeaderboardUI("CgkI_Z7nxqUNEAIQAA");
+    }
+}
