@@ -23,12 +23,14 @@ public class UIManager : MonoBehaviour
     private LeaderboardManager _leaderboardManager;
     [SerializeField]
     private GameObject _pausePanel;
+   
     void Start()
     {
         _scoreText.text = "Score is : " + 0;
         _gameoverText.gameObject.SetActive(false);
         _restartText.gameObject.SetActive(false);
         _pausePanel.gameObject.SetActive(false);
+        
         _gameManager = GameObject.Find("Game_Manager").GetComponent<GameManager>();
         if ( _gameManager == null)
         {
@@ -54,7 +56,7 @@ public class UIManager : MonoBehaviour
             _bestScore = _score;
             _besTScoreText.text = "Best score : " + _bestScore;
             PlayerPrefs.SetInt("Highscore", _bestScore);
-           // _leaderboardManager.AddScoreToLeaderboard(_bestScore);
+            _leaderboardManager.AddScoreToLeaderboard(_bestScore);
         }
     }
     public void UpdateLives(int currentLives)
