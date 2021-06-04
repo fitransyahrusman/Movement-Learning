@@ -4,39 +4,56 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a3f5772-2d98-49ef-afa4-fe79dde69dc9" name="Default Changelist" comment="" />
+    <list default="true" id="273347ae-9186-4071-b96d-5e6ddf646286" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1tLBEpVARXiI1LvCEKfc7JLOvjL" />
+  <component name="ProjectId" id="1tUJkCszrxV0yTFWVfGY4hRTCB3" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="6a3f5772-2d98-49ef-afa4-fe79dde69dc9" name="Default Changelist" comment="" />
-      <created>1622538391305</created>
+      <changelist id="273347ae-9186-4071-b96d-5e6ddf646286" name="Default Changelist" comment="" />
+      <created>1622817879305</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1622538391305</updated>
+      <updated>1622817879305</updated>
     </task>
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="463" y="125" key="FileChooserDialogImpl" timestamp="1622538468776">
+    <state x="184" y="29" key="SettingsEditor" timestamp="1622830721275">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="463" y="125" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1622538468776" />
+    <state x="184" y="29" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1622830721275" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1622819887338">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1622819887338" />
   </component>
 </project>
