@@ -42,6 +42,7 @@ public class Player : MonoBehaviour
     private AudioClip _laserSound;
     private AudioSource _audioSource;
     private Animator _anim;
+
     void Start()
     {
         transform.position = new Vector3(-7, 0, 0);//set position
