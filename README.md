@@ -13,4 +13,6 @@ And from here the next changes should be reflected in commit, hope you enjoy.
 
 Cheers, 
 Fitransyah
+
+
 Please check out the latest build in Google Play Store : https://play.google.com/store/apps/details?id=com.Late30Gamestudio.SpaceShooterGamedevTiwst
