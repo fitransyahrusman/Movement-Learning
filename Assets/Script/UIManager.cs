@@ -2,15 +2,14 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using GooglePlayGames;
+using GooglePlayGames.BasicApi;
+
 
 public class UIManager : MonoBehaviour
 {
     [SerializeField]
     private Text _scoreText;
-    [SerializeField]
-    private Text _besTScoreText;
-    private int _score;
-    private int _bestScore;
     [SerializeField]
     private Sprite[] _livesSprite;
     [SerializeField]
@@ -19,36 +18,34 @@ public class UIManager : MonoBehaviour
     private Text _gameoverText;
     [SerializeField]
     private Text _restartText;
-    private GameManager _gameManager;
     [SerializeField]
     private GameObject _pausePanel;
+    private GameManager _gameManager;
+    private PlayGames _playgames;
+    private int _score;
+
     void Start()
     {
         _scoreText.text = "Score is : " + 0;
         _gameoverText.gameObject.SetActive(false);
         _restartText.gameObject.SetActive(false);
         _pausePanel.gameObject.SetActive(false);
+        
         _gameManager = GameObject.Find("Game_Manager").GetComponent<GameManager>();
         if ( _gameManager == null)
         {
             Debug.LogError("Game Manager in Null");
         }
-        _bestScore = PlayerPrefs.GetInt("Highscore", 0);
-        _besTScoreText.text = "Best score : " + _bestScore;
+        _playgames = GameObject.Find("PlayGames").GetComponent<PlayGames>();
+        if (_playgames == null)
+        {
+            Debug.LogError("Playgames error from UI manager");
+        }
     }
     public void UpdateScore (int playerScore)
     {
         _score = playerScore;
         _scoreText.text = "Score is : " + _score;
-    }
-    public void CheckForBestScore()
-    {
-        if (_score > _bestScore)
-        {
-            _bestScore = _score;
-            _besTScoreText.text = "Best score : " + _bestScore;
-            PlayerPrefs.SetInt("Highscore", _bestScore);
-        }
     }
     public void UpdateLives(int currentLives)
     {
@@ -56,6 +53,13 @@ public class UIManager : MonoBehaviour
         if (currentLives<1)
         {
             GameOverSquence();
+        }
+    }
+    void UpdateLeaderboard()
+    {
+        if (PlayGamesPlatform.Instance.IsAuthenticated())
+        {
+            _playgames.PostScoreToLeaderboard(_score);
         }
     }
     IEnumerator GameoverFlicker()
@@ -74,7 +78,7 @@ public class UIManager : MonoBehaviour
         _restartText.gameObject.SetActive(true);
         _gameManager.GameOver();
         StartCoroutine(GameoverFlicker());
-        CheckForBestScore();
+        UpdateLeaderboard();
     }
     public void PauseGame()
     {

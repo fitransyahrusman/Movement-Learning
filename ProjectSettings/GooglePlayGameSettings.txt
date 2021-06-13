@@ -1,0 +1,9 @@
+lastUpgrade=01012
+proj.pluginVersion=0.10.12
+proj.AppId=327603584110
+and.BundleId=com.Late30Gamestudio.SpaceShooterGamedevTiwst
+proj.classDir=Assets
+proj.ConstantsClassName=Leaderboards
+and.ResourceData=%3c%3fxml+version%3d%221.0%22+encoding%3d%22utf-8%22%3f%3e%0d%0a%3c%21--Google+Play+game+services+IDs.+Save+this+file+as+res%2fvalues%2fgames-ids.xml+in+your+project.--%3e%0d%0a%3cresources%3e%0d%0a++%3c%21--app_id--%3e%0d%0a++%3cstring+name%3d%22app_id%22+translatable%3d%22false%22%3e327603584110%3c%2fstring%3e%0d%0a++%3c%21--package_name--%3e%0d%0a++%3cstring+name%3d%22package_name%22+translatable%3d%22false%22%3ecom.Late30Gamestudio.SpaceShooterGamedevTiwst%3c%2fstring%3e%0d%0a++%3c%21--leaderboard+Highscore--%3e%0d%0a++%3cstring+name%3d%22leaderboard_highscore%22+translatable%3d%22false%22%3eCgkI7vjHtcQJEAIQAA%3c%2fstring%3e%0d%0a%3c%2fresources%3e
+and.ClientId=327603584110-ef5ijfr2sulm22vjej439a2gjsgl064e.apps.googleusercontent.com
+android.SetupDone=true
