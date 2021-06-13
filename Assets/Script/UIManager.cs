@@ -2,8 +2,10 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 using GooglePlayGames;
-using GooglePlayGames.BasicApi;
+using GoogleMobileAds.Api;
+using GoogleMobileAds.Placement;
 
 
 public class UIManager : MonoBehaviour
@@ -20,11 +22,11 @@ public class UIManager : MonoBehaviour
     private Text _restartText;
     [SerializeField]
     private GameObject _pausePanel;
-    [SerializeField]
-    private Text _deathText;
     private GameManager _gameManager;
     private PlayGames _playgames;
     private int _score;
+    public UnityEvent livesLess1;
+    public InterstitialAdGameObject interstitial;
 
     void Start()
     {
@@ -32,7 +34,6 @@ public class UIManager : MonoBehaviour
         _gameoverText.gameObject.SetActive(false);
         _restartText.gameObject.SetActive(false);
         _pausePanel.gameObject.SetActive(false);
-        _deathText.gameObject.SetActive(false);
         
         _gameManager = GameObject.Find("Game_Manager").GetComponent<GameManager>();
         if ( _gameManager == null)
@@ -44,6 +45,13 @@ public class UIManager : MonoBehaviour
         {
             Debug.LogError("Playgames error from UI manager");
         }
+        if (livesLess1==null)
+        {
+            livesLess1 = new UnityEvent();
+        }
+        MobileAds.Initialize((success) => { });
+        interstitial = MobileAds.Instance.GetAd<InterstitialAdGameObject>("Interstitial Ad");
+        interstitial.LoadAd();
     }
     public void UpdateScore (int playerScore)
     {
@@ -55,7 +63,9 @@ public class UIManager : MonoBehaviour
         _liveImg.sprite = _livesSprite[currentLives];
         if (currentLives<1)
         {
-            GameOverSquence();
+            livesLess1.Invoke();
+            //GameOverSquence();
+           
         }
     }
     void UpdateLeaderboard()
@@ -75,7 +85,7 @@ public class UIManager : MonoBehaviour
             yield return new WaitForSeconds(0.25f);
         }
     }
-    void GameOverSquence()
+    public void GameOverSquence()
     {
         _gameoverText.gameObject.SetActive(true);
         _restartText.gameObject.SetActive(true);
@@ -96,9 +106,5 @@ public class UIManager : MonoBehaviour
     public void ToMainMenu()
     {
         SceneManager.LoadScene(0);
-    }
-    public void DeathTextAppear()
-    {
-        _deathText.gameObject.SetActive(true);
     }
 }
