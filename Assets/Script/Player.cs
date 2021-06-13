@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityStandardAssets.CrossPlatformInput;
-using UnityEngine.EventSystems;
+using UnityEngine.Events;
 
 public class Player : MonoBehaviour
 {
@@ -42,6 +42,7 @@ public class Player : MonoBehaviour
     private AudioClip _laserSound;
     private AudioSource _audioSource;
     private Animator _anim;
+    public UnityEvent playerDeath;
 
     void Start()
     {
@@ -75,7 +76,16 @@ public class Player : MonoBehaviour
         {
             _anim = GetComponent<Animator>();
         }
+        if (playerDeath==null)
+        {
+            playerDeath = new UnityEvent();
+            playerDeath.AddListener(PlayerDeathPing);
+        }
     } 
+    void PlayerDeathPing()
+    {
+        Debug.Log("PlayerdeathPING");
+    }
     void Update()
     {
       codeMovement();
@@ -159,6 +169,7 @@ public class Player : MonoBehaviour
         {
             _spawnManager.OnPlayerDeath();
             GameObject explosion = Instantiate(_explosionPrefab, transform.position + new Vector3(0f, 0f, 0f), Quaternion.identity);
+            //playerDeath.Invoke(); //this is to activate event system for Admob later, but dont forget to change the gameobject in inspector for Admob
             Destroy(this.gameObject);
         }
     }

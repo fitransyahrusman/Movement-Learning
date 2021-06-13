@@ -20,6 +20,8 @@ public class UIManager : MonoBehaviour
     private Text _restartText;
     [SerializeField]
     private GameObject _pausePanel;
+    [SerializeField]
+    private Text _deathText;
     private GameManager _gameManager;
     private PlayGames _playgames;
     private int _score;
@@ -30,6 +32,7 @@ public class UIManager : MonoBehaviour
         _gameoverText.gameObject.SetActive(false);
         _restartText.gameObject.SetActive(false);
         _pausePanel.gameObject.SetActive(false);
+        _deathText.gameObject.SetActive(false);
         
         _gameManager = GameObject.Find("Game_Manager").GetComponent<GameManager>();
         if ( _gameManager == null)
@@ -93,5 +96,9 @@ public class UIManager : MonoBehaviour
     public void ToMainMenu()
     {
         SceneManager.LoadScene(0);
+    }
+    public void DeathTextAppear()
+    {
+        _deathText.gameObject.SetActive(true);
     }
 }

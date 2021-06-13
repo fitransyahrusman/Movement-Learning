@@ -8,7 +8,7 @@
     "com.unity.inputsystem": "1.0.2",
     "com.unity.postprocessing": "3.1.0",
     "com.unity.render-pipelines.universal": "10.5.0",
-    "com.unity.test-framework": "1.1.24",
+    "com.unity.test-framework": "1.1.26",
     "com.unity.textmeshpro": "3.0.6",
     "com.unity.timeline": "1.4.8",
     "com.unity.ugui": "1.0.0",
@@ -43,5 +43,14 @@
     "com.unity.modules.vr": "1.0.0",
     "com.unity.modules.wind": "1.0.0",
     "com.unity.modules.xr": "1.0.0"
-  }
+  },
+  "scopedRegistries": [
+    {
+      "name": "Game Package Registry by Google",
+      "url": "https://unityregistry-pa.googleapis.com",
+      "scopes": [
+        "com.google"
+      ]
+    }
+  ]
 }
