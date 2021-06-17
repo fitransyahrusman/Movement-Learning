@@ -5,10 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-
+    private AdMob _adMob;
     private void Start()
     {
-        
+        _adMob = GameObject.Find("Ads_Manager").GetComponent<AdMob>();
     }
    
     public void LoadGame()

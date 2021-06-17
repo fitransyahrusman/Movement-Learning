@@ -1,10 +1,12 @@
-using System;
 using UnityEngine;
-//using GoogleMobileAds.Api;
+using GoogleMobileAds.Api;
+using GoogleMobileAds.Placement;
 
 
 public class AdMob : MonoBehaviour
 {
+    public BannerAdGameObject banner;
+
     // Start is called before the first frame update
     private void Awake()
     {
@@ -13,12 +15,9 @@ public class AdMob : MonoBehaviour
     void Start()
     {
        
-        //MobileAds.Initialize((success) => { });
-    }
+        MobileAds.Initialize((success) => { });
+        banner = MobileAds.Instance.GetAd<BannerAdGameObject>("Banner Ad");
+        banner.LoadAd();
 
-    
-    void Update()
-    {
-        
     }
 }
