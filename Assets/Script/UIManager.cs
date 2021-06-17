@@ -7,7 +7,6 @@ using GooglePlayGames;
 using GoogleMobileAds.Api;
 using GoogleMobileAds.Placement;
 
-
 public class UIManager : MonoBehaviour
 {
     [SerializeField]
