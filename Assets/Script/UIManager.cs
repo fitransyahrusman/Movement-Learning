@@ -64,8 +64,6 @@ public class UIManager : MonoBehaviour
         if (currentLives<1)
         {
             livesLess1.Invoke();
-            //GameOverSquence();
-           
         }
     }
     void UpdateLeaderboard()

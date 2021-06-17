@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: GoogleMobileAdsPlacements
   m_EditorClassIdentifier: 
   allPlacements:
-  - placementName: AdMob Demo Banner Ad
+  - placementName: Banner Ad
     adType: 0
-    androidAdUnitId: ca-app-pub-3940256099942544/6300978111
-    iOSAdUnitId: ca-app-pub-3940256099942544/2934735716
+    androidAdUnitId: ca-app-pub-9181136016263147/4786773036
+    iOSAdUnitId: 
     persistent: 0
-    autoLoadEnabled: 1
-  - placementName: AdMob Demo Interstitial Ad
+    autoLoadEnabled: 0
+  - placementName: Interstitial Ad
     adType: 1
-    androidAdUnitId: ca-app-pub-3940256099942544/1033173712
-    iOSAdUnitId: ca-app-pub-3940256099942544/4411468910
+    androidAdUnitId: ca-app-pub-9181136016263147/8885800146
+    iOSAdUnitId: 
     persistent: 0
     autoLoadEnabled: 0
