@@ -19,7 +19,7 @@ public class Backsound : MonoBehaviour
         }
         else
         {
-            _audioSource.clip = audioClip[0];
+            _audioSource.clip = audioClip[2];
             _audioSource.Play();
         }      
     }

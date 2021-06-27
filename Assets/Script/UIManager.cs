@@ -24,15 +24,21 @@ public class UIManager : MonoBehaviour
     private GameManager _gameManager;
     private PlayGames _playgames;
     private int _score;
+    private Animator _pauseAnimation;
+    
     public UnityEvent showAd;
     public InterstitialAdGameObject interstitial;
+    
 
     void Start()
     {
         _scoreText.text = "Score is : " + 0;
         _gameoverText.gameObject.SetActive(false);
         _restartText.gameObject.SetActive(false);
-        _pausePanel.gameObject.SetActive(false);
+        _pausePanel.gameObject.SetActive(true);
+       
+        _pauseAnimation = GameObject.Find("Pause Menu"). GetComponent<Animator>();
+        _pauseAnimation.updateMode = AnimatorUpdateMode.UnscaledTime;
         
         _gameManager = GameObject.Find("Game_Manager").GetComponent<GameManager>();
         if ( _gameManager == null)
@@ -93,12 +99,13 @@ public class UIManager : MonoBehaviour
     public void PauseGame()
     {
         Time.timeScale = 0;
-        _pausePanel.gameObject.SetActive(true);
+        _pauseAnimation.SetBool("isPaused", true);
+        
     }
     public void ResumeGame()
     {
+        _pauseAnimation.SetBool("isPaused", false);
         Time.timeScale = 1;
-        _pausePanel.gameObject.SetActive(false);
     }
     public void ToMainMenu()
     {
