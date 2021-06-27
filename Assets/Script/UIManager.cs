@@ -24,7 +24,7 @@ public class UIManager : MonoBehaviour
     private GameManager _gameManager;
     private PlayGames _playgames;
     private int _score;
-    public UnityEvent livesLess1;
+    public UnityEvent showAd;
     public InterstitialAdGameObject interstitial;
 
     void Start()
@@ -44,9 +44,9 @@ public class UIManager : MonoBehaviour
         {
             Debug.LogError("Playgames error from UI manager");
         }
-        if (livesLess1==null)
+        if (showAd==null)
         {
-            livesLess1 = new UnityEvent();
+            showAd = new UnityEvent();
         }
         MobileAds.Initialize((success) => { });
         interstitial = MobileAds.Instance.GetAd<InterstitialAdGameObject>("Interstitial Ad");
@@ -62,7 +62,7 @@ public class UIManager : MonoBehaviour
         _liveImg.sprite = _livesSprite[currentLives];
         if (currentLives<1)
         {
-            livesLess1.Invoke();
+            GameOverSquence();
         }
     }
     void UpdateLeaderboard()
@@ -82,7 +82,7 @@ public class UIManager : MonoBehaviour
             yield return new WaitForSeconds(0.25f);
         }
     }
-    public void GameOverSquence()
+    private void GameOverSquence()
     {
         _gameoverText.gameObject.SetActive(true);
         _restartText.gameObject.SetActive(true);
@@ -102,6 +102,14 @@ public class UIManager : MonoBehaviour
     }
     public void ToMainMenu()
     {
-        SceneManager.LoadScene(0);
+        int interstitialNum = Random.Range(0,2);
+        if (interstitialNum==0)
+        {
+            showAd.Invoke();
+        }
+        else
+        {
+            SceneManager.LoadScene(0);
+        }
     }
 }

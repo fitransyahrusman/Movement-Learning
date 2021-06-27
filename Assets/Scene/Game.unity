@@ -1681,9 +1681,9 @@ MonoBehaviour:
   onAdClosed:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 942327954}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: GameOverSquence
+      - m_Target: {fileID: 1409925481}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Scene0
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1752,7 +1752,7 @@ MonoBehaviour:
   _gameoverText: {fileID: 1559453171}
   _restartText: {fileID: 1396588639}
   _pausePanel: {fileID: 2102975981}
-  livesLess1:
+  showAd:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 936764753}
@@ -3059,6 +3059,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _isGameover: 0
+  interstitial: {fileID: 0}
+  keydown:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 936764753}
+        m_TargetAssemblyTypeName: GoogleMobileAds.Placement.InterstitialAdGameObject,
+          GoogleMobileAds.Placement
+        m_MethodName: ShowIfLoaded
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &1409925482
 Transform:
   m_ObjectHideFlags: 0
