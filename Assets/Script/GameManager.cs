@@ -22,8 +22,6 @@ public class GameManager : MonoBehaviour
         MobileAds.Initialize((success) => { });
         interstitial = MobileAds.Instance.GetAd<InterstitialAdGameObject>("Interstitial Ad");
         interstitial.LoadAd();
-
-
     }
     void Update()
     {

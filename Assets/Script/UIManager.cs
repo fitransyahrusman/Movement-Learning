@@ -57,6 +57,7 @@ public class UIManager : MonoBehaviour
         MobileAds.Initialize((success) => { });
         interstitial = MobileAds.Instance.GetAd<InterstitialAdGameObject>("Interstitial Ad");
         interstitial.LoadAd();
+
     }
     public void UpdateScore (int playerScore)
     {
@@ -98,14 +99,16 @@ public class UIManager : MonoBehaviour
     }
     public void PauseGame()
     {
-        Time.timeScale = 0;
-        _pauseAnimation.SetBool("isPaused", true);
-        
-    }
-    public void ResumeGame()
-    {
-        _pauseAnimation.SetBool("isPaused", false);
-        Time.timeScale = 1;
+        if (Time.timeScale == 1)
+        {
+            Time.timeScale = 0;
+            _pauseAnimation.SetBool("isPaused", true);
+        }
+        else if (Time.timeScale== 0)
+        {
+            _pauseAnimation.SetBool("isPaused", false);
+            Time.timeScale = 1;
+        }  
     }
     public void ToMainMenu()
     {

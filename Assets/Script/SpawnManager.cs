@@ -58,25 +58,33 @@ public class SpawnManager : MonoBehaviour
     }
     IEnumerator SpawnAsteroid()
     {
-        while (_stopSpawning == false)
+        do
         {
             int _spawnTimeAsteroid = Random.Range(7, 10); //makespawntime random
-            yield return new WaitForSeconds(_spawnTimeAsteroid);
-            GameObject newAsteroid = Instantiate(_asteroid, new Vector2(Random.Range(-8f, 0f), 7.2f), Quaternion.identity);
-            newAsteroid.transform.parent = _asteroidContainer.transform;
+            while (_stopSpawning == false)
+            {
+                GameObject newAsteroid = Instantiate(_asteroid, new Vector2(Random.Range(-8f, 0f), 7.2f), Quaternion.identity);
+                newAsteroid.transform.parent = _asteroidContainer.transform;
+                yield return new WaitForSeconds(_spawnTimeAsteroid);
+            }
         }
+        while (_stopSpawning == false);
     }
     IEnumerator SpawnAsteroid2()
     {
-        while (_stopSpawning == false)
+        do
         {
             int _spawnTimeAsteroid = Random.Range(7, 10); //makespawntime random
-            yield return new WaitForSeconds(_spawnTimeAsteroid);
-            GameObject newAsteroid = Instantiate(_asteroid2, new Vector2(Random.Range(-8f, 0f), -7.2f), Quaternion.identity);
-            newAsteroid.transform.parent = _asteroidContainer.transform;
+            while (_stopSpawning == false)
+            {
+                GameObject newAsteroid = Instantiate(_asteroid2, new Vector2(Random.Range(-8f, 0f), -7.2f), Quaternion.identity);
+                newAsteroid.transform.parent = _asteroidContainer.transform;
+                yield return new WaitForSeconds(_spawnTimeAsteroid);
+            }
         }
+        while (_stopSpawning == false);
     }
-    public void AddEnemyInstance ()
+    public void AddEnemyInstance()
     {
         _enemyInstance++;
         if (_enemyInstance == 50)

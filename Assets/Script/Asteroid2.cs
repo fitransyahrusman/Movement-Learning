@@ -11,7 +11,7 @@ public class Asteroid2 : MonoBehaviour
     private SpawnManager _spawnManager;
     void Start()
     {
-        _player = GameObject.Find("Player").GetComponent<Player>(); //this create error/null after player dead
+       
         _spawnManager = GameObject.Find("Spawn_Manager").GetComponent<SpawnManager>();
         if (_spawnManager == null)
         {
@@ -31,6 +31,10 @@ public class Asteroid2 : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            if (_player == null)
+            {
+                _player = GameObject.Find("Player").GetComponent<Player>();
+            }
             _player.Damage();
             GameObject explosion = Instantiate(_explosionPrefab, transform.position + new Vector3(0f, 0f, 0f), Quaternion.identity);
             Destroy(this.gameObject);
