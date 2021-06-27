@@ -754,3 +754,4 @@ Total: 5.288000 ms (FindLiveObjects: 0.787600 ms CreateObjectMapping: 0.315300 m
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
