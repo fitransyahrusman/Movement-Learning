@@ -36,7 +36,6 @@ public class UIManager : MonoBehaviour
         _gameoverText.gameObject.SetActive(false);
         _restartText.gameObject.SetActive(false);
         _pausePanel.gameObject.SetActive(true);
-       
         _pauseAnimation = GameObject.Find("Pause Menu"). GetComponent<Animator>();
         _pauseAnimation.updateMode = AnimatorUpdateMode.UnscaledTime;
         

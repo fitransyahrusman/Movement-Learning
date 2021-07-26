@@ -4,14 +4,7 @@ using UnityEngine;
 
 public class MovingStars : MonoBehaviour
 {
-    // Start is called before the first frame update
     private float _speed = 0.5f;
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
         Moving();

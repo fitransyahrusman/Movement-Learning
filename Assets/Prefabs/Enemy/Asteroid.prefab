@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5340799707748775842}
   - component: {fileID: 5340799707748775843}
   - component: {fileID: 5340799707748775852}
-  - component: {fileID: 5340799707748775853}
+  - component: {fileID: 1033801896}
   m_Layer: 0
   m_Name: Asteroid
   m_TagString: Enemy
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1238815191
-  m_SortingLayer: 1
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 6691643d9d08ede40bc93504dc8acb2e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -122,7 +122,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &5340799707748775853
+--- !u!114 &1033801896
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -131,7 +131,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 5340799707748775854}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: acade94481eed2c4c89039ec11882c7d, type: 3}
+  m_Script: {fileID: 11500000, guid: c499edbacaa2fd04eacddeab277144f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _behaviourID: 2
   _explosionPrefab: {fileID: 6856393512652185373, guid: d36a0af611782b04c943fa4cfd59f9cf, type: 3}

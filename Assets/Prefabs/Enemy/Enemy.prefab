@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4836546870150390968}
   - component: {fileID: 4836546870150390971}
   - component: {fileID: 4836546870150390970}
-  - component: {fileID: 4836546870150390949}
+  - component: {fileID: 1382810265}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2110069047
-  m_SortingLayer: 2
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 3154912113cbb4a498df6f571c74e18c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -132,7 +132,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &4836546870150390949
+--- !u!114 &1382810265
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -141,7 +141,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 4836546870150390948}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c6d2bb220e6e3746acb67d60f9c1fba, type: 3}
+  m_Script: {fileID: 11500000, guid: c499edbacaa2fd04eacddeab277144f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _behaviourID: 0
   _explosionPrefab: {fileID: 6856393512652185373, guid: d36a0af611782b04c943fa4cfd59f9cf, type: 3}
